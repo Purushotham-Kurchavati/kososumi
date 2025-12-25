@@ -233,4 +233,5 @@ Create a subfolder like `research/images/` and drop your diagrams there as you s
 ## Research Papers & Articles
 
 - [Introducing SWE-1.5: Our Fast Agent Model](./SWE-1.5.md)
+- [Introducing SWE-grep and SWE-grep-mini: RL for Multi-Turn, Fast Context Retrieval](./SWE-grep.md)
 
