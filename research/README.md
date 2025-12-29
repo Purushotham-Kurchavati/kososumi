@@ -4,6 +4,9 @@ Source article: ["Devin's 2025 Performance Review: Learnings From 18 Months of A
 
 ---
 
+
+![Uploading image.png…]()
+
 ## Overview
 
 - **Context**: Eighteen months after launch, Devin has gone from small projects to working in engineering teams at thousands of companies (e.g. Goldman Sachs, Santander, Nubank).
