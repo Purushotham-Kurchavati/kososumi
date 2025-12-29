@@ -5,7 +5,7 @@ Source article: ["Devin's 2025 Performance Review: Learnings From 18 Months of A
 ---
 
 
-![Uploading image.png…]()
+![Uploading image.png…](https://cdn.sanity.io/images/2mc9cv2v/production/1669b064fa3d9de7a68b62b4d2784e7856fbed27-1400x500.png)
 
 ## Overview
 
