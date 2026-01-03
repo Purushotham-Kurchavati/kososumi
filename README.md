@@ -1,51 +1,52 @@
-# AI Learning Roadmap
+# Kōsōsumi (構想墨)
 
-This repository contains a structured and research-driven roadmap for learning Artificial Intelligence from foundational concepts to modern systems such as large language models and autonomous agents.
+Kōsōsumi is a research-driven repository focused on building a clear and structured understanding of Artificial Intelligence, from foundational concepts to modern systems such as large language models and autonomous agents.
 
-The focus of this project is not speed or trend-driven learning, but building strong conceptual clarity, research literacy, and long-term understanding of how modern AI systems are designed and evaluated.
+The name *Kōsōsumi* (構想墨) represents conceptual system design preserved in writing. This repository serves as a space to think through ideas carefully, study influential research, and document understanding in a deliberate and organized manner.
 
 ---
 
 ## Purpose
 
-The purpose of this repository is to organize the AI learning process in a clear and intentional manner by:
+The purpose of this repository is to structure the AI learning process with intention and clarity. It aims to move beyond fragmented learning by organizing concepts, research papers, and reflections into a coherent progression.
 
-- Defining a coherent learning path from fundamentals to advanced topics
-- Grounding learning in well-established and modern research papers
-- Reducing fragmented and unstructured learning
-- Gradually transitioning from learning concepts to understanding real-world AI systems
+This repository is designed to:
+- Define a clear learning path from fundamentals to advanced AI systems
+- Ground learning in both foundational and modern research papers
+- Encourage depth of understanding rather than rapid or trend-driven coverage
+- Support a gradual transition from learning concepts to reasoning about real-world AI systems
 
-This repository is intended to evolve over time as research, understanding, and priorities change.
+Kōsōsumi is a living project and will evolve as research focus and understanding mature.
 
 ---
 
 ## Scope
 
-This repository focuses on learning and research, not production code.
+This repository is focused on learning and research rather than production-ready code.
 
-It is designed to support:
-- Conceptual understanding of AI and machine learning
-- Reading and analyzing influential research papers
-- Building intuition about modern AI systems such as transformers and agents
+It is intended to support:
+- Conceptual understanding of artificial intelligence and machine learning
+- Reading, analyzing, and summarizing influential research papers
+- Developing intuition about modern AI systems such as transformers, agents, and evaluation frameworks
 
-It does not aim to be a complete course, a tutorial series, or a production-ready codebase.
+It does not aim to be a complete course, a tutorial collection, or a finished curriculum.
 
 ---
 
 ## Repository Structure
 
 ```text
-ai-learning-roadmap/
+kososumi/
 │
 ├── README.md        # Project overview and intent
-├── ROADMAP.md       # Detailed learning roadmap (to be expanded)
+├── ROADMAP.md       # Structured AI learning roadmap
 │
 ├── research/        # Curated research papers and analyses
 │   ├── Devin's 2025 Performance Review.md
 │   ├── Introducing SWE-1.5: Our Fast Agent Model.md
 │
-├── notes/           # Learning notes and reflections (planned)
-├── projects/        # Hands-on implementations (planned)
-├── resources/       # Courses, blogs, and references (planned)
+├── notes/           # Learning notes and reflections
+├── projects/        # Practical experiments and implementations (planned)
+├── resources/       # Courses, blogs, and reference material (planned)
 │
 └── .gitignore       # Repository hygiene
