@@ -1,4 +1,5 @@
-Devin's 2025 Performance Review: Learnings From 18 Months of Agents At Work
+# Devin’s 2025 Performance Review
+### Learnings From 18 Months of Agents At Work
 
 ![Devin 2025 Performance Review – Cover Image](https://cdn.sanity.io/images/2mc9cv2v/production/1669b064fa3d9de7a68b62b4d2784e7856fbed27-1400x500.png)
 
@@ -92,3 +93,9 @@ This puts more of a responsibility on the engineer to scope work well up-front. 
 
 Soft skills and interpersonal work
 While it’s great at collaborating in Slack, Teams, and Jira, it cannot manage reports or stakeholders or deal with teammates' emotions. It definitely won’t be organizing lunch-and-learns or patiently mentoring a direct report any time soon! It is, however, infinitely friendly, patient, and responsive.
+
+## What this repository contains
+- 📌 Executive summary of Devin’s performance
+- 📊 Key productivity and efficiency metrics
+- 🧠 Strength patterns and limitations of autonomous agents
+- 🔗 Link to the full research paper ([Notion](https://www.notion.so/Devin-the-AIsoftware-engineer-2d14949aa5bc806289a5f9141055207e?source=copy_link))
