@@ -92,17 +92,3 @@ This puts more of a responsibility on the engineer to scope work well up-front. 
 
 Soft skills and interpersonal work
 While it’s great at collaborating in Slack, Teams, and Jira, it cannot manage reports or stakeholders or deal with teammates' emotions. It definitely won’t be organizing lunch-and-learns or patiently mentoring a direct report any time soon! It is, however, infinitely friendly, patient, and responsive.
-
-
-
-# Devin, the AI Software Engineer
-
-## Devin’s 2025 Performance Review
-### Learnings from 18 Months of Agents at Work
-
-
-
-**Bold text**
-*Italic text*
-~~Strikethrough~~
-
