@@ -1,4 +1,4 @@
-Introducing SWE-1.5: Our Fast Agent Model
+# **Introducing SWE-1.5: Our Fast Agent Model**
 
 by Jacob Teo, Nikhil Jha, Connor Fogarty, Gary Chang, Theodor Marcu, Edison Zhang, Albert Tam, Sean Sullivan, Swyx, Silas Alberti
 
