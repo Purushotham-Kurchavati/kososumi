@@ -9,12 +9,12 @@ Devin's now merged hundreds of thousands of PRs.
 
 At this point, Devin's well past due for a performance review - just like any human engineer.
 
-How we evaluated Devin
+**How we evaluated Devin**
 We first tried to calibrate Devin against a traditional engineering competency matrix, but this was difficult. While human engineers tend to cluster around a level, Devin is senior-level at codebase understanding but junior at execution. It has infinite capacity but struggles at soft skills.
 
 Instead we summarized Devin's strengths and weaknesses in real-world environments, with examples and metrics from customers. We hope this will be helpful to anyone who's interested in real-world agent deployment.
 
-Strength pattern #1: Junior execution at infinite scale
+**Strength pattern #1: Junior execution at infinite scale**
 Devin excels at tasks with clear, upfront requirements and verifiable outcomes that would take a junior engineer 4-8 hrs of work.
 
 Unlike a human, though, it is infinitely parallelizable and never sleeps. This makes it well-suited to critical but less creative work like migrating and modernizing repos, fixing vulnerabilities surfaced by static analysis tools like SonarQube and Veracode, writing unit tests, and completing small tickets. This frees up human engineers for higher-impact projects.
@@ -23,12 +23,12 @@ Over the past year, Devin has become a faster and better junior engineer - it’
 
 ![Devin Enterprise Engineering Workflow](https://cdn.sanity.io/images/2mc9cv2v/production/621afab3e569a2b90e61a952c733b4e0f1d65cba-2963x1467.png)
 
-Security vulnerability resolution
+**Security vulnerability resolution**
 Devin is great at resolving vulnerabilities flagged by static analysis tools (e.g. SonarQube, Veracode).
 
 A few standout examples: One large organization saved 5-10% of total developer time by using Devin for security fixes. Another saw 20x efficiency gain: human developers average 30 minutes per vulnerability, Devin, 1.5 minutes.
 
-Language and framework upgrades, migrations, and modernization
+**Language and framework upgrades, migrations, and modernization**
 Customers use Devin for modernization and migrations, like SAS → PySpark, COBOL, Angular → React, .NET Framework → .NET Core, or switching off proprietary frameworks.
 
 Once it gets instructions on how to update each repo, a fleet of Devins can execute on every repo in parallel. This results in massive savings. A few examples from this year:
@@ -40,18 +40,18 @@ When Oracle sunsetted legacy support for one Java version, Devin was able to mig
 
 Using agents decrease the cost of modernization, so organizations can spend more time building new features than maintaining legacy code.
 
-Test generation
+**Test generation**
 Devin can do the first pass of writing tests, with humans checking logic. Humans will write a unit testing playbook for Devin that spans a few hundred repos at a time. Then a fleet of Devins will go off and write the tests. After, code owners will check to see if all logic has been tested.
 
 Companies' test coverage typically rises from 50-60% to 80-90% when using Devin.
 
-Brownfield feature development
+**Brownfield feature development**
 When existing code provides clear patterns, Devin can replicate and modify: adding API endpoints, creating frontend components, extending functionality. Devin pushed about ⅓ of the commits on our web app.
 
-PR review
+**PR review**
 Devin can execute first-pass reviews and catch obvious issues. Human review is still necessary, because code quality is not straightforwardly verifiable.
 
-Data analysis & QA work
+**Data analysis & QA work**
 
 ![Devin Codebase Understanding and Planning](https://cdn.sanity.io/images/2mc9cv2v/production/8a30c06c220b9fed9bea558f9945126709fac55a-1200x721.png)
 
@@ -61,14 +61,14 @@ One customer, EightSleep, ships 3x as many data features and investigations with
 
 Another skill Devin has picked up is quality engineering. When Litera gave every engineering manager a “team of Devins” acting as QE testers, SREs, and DevOps specialists, test coverage increased by 40% and regression cycles got 93% faster.
 
-Strength pattern #2: Senior intelligence on demand
+**Strength pattern #2: Senior intelligence on demand**
 Only 20% of engineering time is spent coding; much more goes into other work, like planning and reviewing.
 
 Devin's gotten massively better over the past year at understanding large codebases (one driver of its doubled PR merge rate). This means it can quickly document large codebases, and assist humans with planning.
 
 This capability looks more like having a tenured senior engineer on-demand to answer any questions. Engineers can onboard faster, and chat with Devin to understand their codebase and plan projects.
 
-Documentation
+**Documentation**
 When onboarding to a codebase, Devin generates comprehensive, always-updating documentation with system diagrams (DeepWiki). It can do this on large repos - customers have used DeepWiki to generate docs for 5M lines of COBOL or 500GB repos.
 
 ![Devin Real World Agent Deployment Architecture](https://cdn.sanity.io/images/2mc9cv2v/production/de62d08befecf33f2f0f55f4ca35f35a831a4138-2916x1908.png)
