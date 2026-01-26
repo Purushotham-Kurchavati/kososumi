@@ -75,7 +75,7 @@ When onboarding to a codebase, Devin generates comprehensive, always-updating do
 
 A bank could re-allocate several engineering teams from a big documentation project to new feature development, since Devin generated documentation across 400,000+ repositories.
 
-Planning
+**Planning**
 When engineers are planning work, they will look at the documentation and chat with Devin (AskDevin) to understand the system. Devin can explain with architecture diagrams, map dependencies, and flag any breaking changes, and recommend what should be tackled by humans vs AI.
 
 One engineer told us that he could generate draft architecture in 15 minutes for others to react to.
