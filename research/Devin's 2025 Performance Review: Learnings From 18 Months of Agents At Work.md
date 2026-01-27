@@ -80,18 +80,18 @@ When engineers are planning work, they will look at the documentation and chat w
 
 One engineer told us that he could generate draft architecture in 15 minutes for others to react to.
 
-Devin's areas for improvement
+**Devin's areas for improvement**
 Independent execution on ambiguous requirements
 Like most junior engineers, Devin does best with clear requirements. Devin can't independently tackle an ambiguous coding project end-to-end like a senior engineer could, using its own judgement. For example, in visual design, Devin needs specifics like component structure, color codes, and spacing values.
 
 When outcomes aren't straightforwardly verifiable, additional human review is necessary. Humans check unit testing logic after Devin takes the first pass, and check its code reviews.
 
-Scope changes and iterative collaboration
+**Scope changes and iterative collaboration**
 Devin handles clear upfront scoping well, but not mid-task requirement changes. It usually performs worse when you keep telling it more after it starts the task. This differs from human juniors: you can coach a human through iterative problem-solving.
 
 This puts more of a responsibility on the engineer to scope work well up-front. Engineers working with Devin have to adjust to learning how to "manage" Devin effectively.
 
-Soft skills and interpersonal work
+**Soft skills and interpersonal work**
 While it’s great at collaborating in Slack, Teams, and Jira, it cannot manage reports or stakeholders or deal with teammates' emotions. It definitely won’t be organizing lunch-and-learns or patiently mentoring a direct report any time soon! It is, however, infinitely friendly, patient, and responsive.
 
 ## What this repository contains
