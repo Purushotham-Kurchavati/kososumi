@@ -12,11 +12,11 @@ Developers shouldn’t have to choose between an AI that thinks fast and one tha
 # **The Agent-Model Interface**
 Our goal as an agent lab is not to train a model in isolation, but to build a complete agent. Often-overlooked components are the agent harness, the inference provider, and the end-to-end user experience. As a result, the development process for SWE 1.5 involved:
 
-End-to-end reinforcement learning (RL) on real task environments using our custom Cascade agent harness on top of a leading open-source base model.
+**End-to-end reinforcement learning (RL) on real task environments using our custom Cascade agent harness on top of a leading open-source base model.
 Continuous iteration on the model training, harness improvements, tools, and prompt engineering.
 Rewriting core tools and systems from scratch when needed for better speed and accuracy (lots of things become bottlenecks when a model runs 10x faster!). This is an area where we plan to continue making progress. Improvements here also contribute to the performance of all other models in Windsurf.
 Heavy reliance on real-world internal dogfooding to drive tuning decisions, which allowed us to tune the agent and model on user experience in a way that general-purpose reward functions could not.
-Deploying multiple beta versions of the model (under the "Falcon Alpha" name) and monitoring performance metrics.
+Deploying multiple beta versions of the model (under the "Falcon Alpha" name) and monitoring performance metrics.**
 
 ![SWE-1.5 Agent Model Interface and RL Training Stack](https://cdn.sanity.io/images/2mc9cv2v/production/065263aa9933f9196d9fca336d42a975d199c94e-2550x1500.png)
 
@@ -27,9 +27,9 @@ Picking a coding agent isn’t just about the model itself. The surrounding orch
 # **RL Coding Environments**
 We believe that the quality of the coding environments in RL tasks is the most important factor for downstream model performance. We’ve observed the following issues with commonly used coding environments:
 
-Narrow task distribution: **Many labs try to hillclimb SWE-Bench which has a very narrow set of repositories and task types.**
+# ** Narrow task distribution: **Many labs try to hillclimb SWE-Bench which has a very narrow set of repositories and task types.**
 Ignoring soft factors: When using exclusively verifiable correctness rewards like unit tests, the models aren’t incentivized to write high-quality code. This results in what is widely known as “AI slop”: code that is overly verbose, uses excessive try-catch blocks and other anti-patterns.
-To address these issues, we manually created a dataset that aims to mirror the wide distribution of real-world tasks & languages we see across Devin and Windsurf. We invested heavily into creating our own evals, based on our learnings from our work on Devin and the Junior-Dev Benchmark.
+To address these issues, we manually created a dataset that aims to mirror the wide distribution of real-world tasks & languages we see across Devin and Windsurf. We invested heavily into creating our own evals, based on our learnings from our work on Devin and the Junior-Dev Benchmark. **
 
 We also worked with a hand-selected team of top senior engineers, open-source maintainers, and engineering leaders to design high-fidelity coding environments. We have three grading mechanisms in our environments:
 
