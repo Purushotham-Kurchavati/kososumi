@@ -94,15 +94,6 @@ This puts more of a responsibility on the engineer to scope work well up-front. 
 # **Soft skills and interpersonal work**
 While it’s great at collaborating in Slack, Teams, and Jira, it cannot manage reports or stakeholders or deal with teammates' emotions. It definitely won’t be organizing lunch-and-learns or patiently mentoring a direct report any time soon! It is, however, infinitely friendly, patient, and responsive.
 
-
-'''diff
-- text in red
-+ text in green
-! text in orange
-# text in gray
-@@ text in purple (and bold) @@
-'''
-
 ## What this repository contains
 - 📌 Executive summary of Devin’s performance
 - 📊 Key productivity and efficiency metrics
