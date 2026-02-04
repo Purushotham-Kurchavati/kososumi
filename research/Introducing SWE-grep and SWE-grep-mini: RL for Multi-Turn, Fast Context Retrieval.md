@@ -57,7 +57,7 @@ We train SWE-grep directly with multi-turn reinforcement learning. Then we disti
 
 We’ll explain some details about our training algorithm, a modified version of the policy gradient, and some tweaks that helped us keep training stable.
 
-Policy Gradient
+Policy Gradient 
 Given an LLM policy and outcome reward R, the policy gradient is given by
 
 
