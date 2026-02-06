@@ -22,6 +22,12 @@ We will be rolling Fast Context out progressively to Windsurf users, starting fr
 
 Check out how Fast Context reduces the time it takes to understand large codebases:
 
+## 🎥 Demo
+
+We demonstrate Fast Context’s speed advantages over frontier agents in the following video:
+
+👉 **[Watch Demo Video](https://cdn.sanity.io/files/2mc9cv2v/production/ba9bd82ef56dbd6cc1c0fa5852fec0e8abd91897.mp4)**
+
 You can try it out in our playground now at https://playground.cognition.ai/.
 
 
