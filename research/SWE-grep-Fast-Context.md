@@ -135,3 +135,6 @@ Our ultimate goal at the combined Cognition+Windsurf is to maximize your softwar
 
 ![Fast Context Parallel Search Illustration](https://cdn.sanity.io/images/2mc9cv2v/production/a6e3d6c7846969e2a87835210c532ba7b1bad617-2198x1600.png)
 
+👉 **Read the original Notion doc:**  
+[Introducing SWE-grep and SWE-grep-mini on Notion](https://www.notion.so/Introducing-SWE-grep-and-SWE-grep-mini-RL-for-Multi-Turn-Fast-Context-Retrieval-2fb4949aa5bc80b7816bcee808431f8b)
+
