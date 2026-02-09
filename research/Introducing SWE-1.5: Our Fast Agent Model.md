@@ -1,3 +1,5 @@
+October 29, 2025
+
 # **Introducing SWE-1.5: Our Fast Agent Model**
 
 by Jacob Teo, Nikhil Jha, Connor Fogarty, Gary Chang, Theodor Marcu, Edison Zhang, Albert Tam, Sean Sullivan, Swyx, Silas Alberti
@@ -27,7 +29,7 @@ Picking a coding agent isn’t just about the model itself. The surrounding orch
 # **RL Coding Environments**
 We believe that the quality of the coding environments in RL tasks is the most important factor for downstream model performance. We’ve observed the following issues with commonly used coding environments:
 
-# ** Narrow task distribution: **Many labs try to hillclimb SWE-Bench which has a very narrow set of repositories and task types.**
+# **Narrow task distribution: **Many labs try to hillclimb SWE-Bench which has a very narrow set of repositories and task types.**
 Ignoring soft factors: When using exclusively verifiable correctness rewards like unit tests, the models aren’t incentivized to write high-quality code. This results in what is widely known as “AI slop”: code that is overly verbose, uses excessive try-catch blocks and other anti-patterns.
 To address these issues, we manually created a dataset that aims to mirror the wide distribution of real-world tasks & languages we see across Devin and Windsurf. We invested heavily into creating our own evals, based on our learnings from our work on Devin and the Junior-Dev Benchmark. **
 
