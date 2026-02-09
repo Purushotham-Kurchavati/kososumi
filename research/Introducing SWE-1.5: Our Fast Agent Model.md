@@ -12,7 +12,7 @@ Developers shouldn’t have to choose between an AI that thinks fast and one tha
 # **The Agent-Model Interface**
 Our goal as an agent lab is not to train a model in isolation, but to build a complete agent. Often-overlooked components are the agent harness, the inference provider, and the end-to-end user experience. As a result, the development process for SWE 1.5 involved:
 
-**End-to-end reinforcement learning (RL) on real task environments using our custom Cascade agent harness on top of a leading open-source base model.
+#**End-to-end reinforcement learning (RL) on real task environments using our custom Cascade agent harness on top of a leading open-source base model.
 Continuous iteration on the model training, harness improvements, tools, and prompt engineering.
 Rewriting core tools and systems from scratch when needed for better speed and accuracy (lots of things become bottlenecks when a model runs 10x faster!). This is an area where we plan to continue making progress. Improvements here also contribute to the performance of all other models in Windsurf.
 Heavy reliance on real-world internal dogfooding to drive tuning decisions, which allowed us to tune the agent and model on user experience in a way that general-purpose reward functions could not.
