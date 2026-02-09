@@ -1,3 +1,5 @@
+November 14, 2025
+
 # Devin’s 2025 Performance Review
 ### Learnings From 18 Months of Agents At Work
 
