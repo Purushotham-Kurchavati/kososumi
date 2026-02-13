@@ -2,7 +2,7 @@ May 6, 2025
 
 # **Kevin-32B: Multi-Turn RL for Writing CUDA Kernels**
 
-by Carlo Baronio, Pietro Marsella, Ben Pan, Silas Alberti
+<h1 align=">by Carlo Baronio, Pietro Marsella, Ben Pan, Silas Alberti"</h1>
 
 Carlo Baronio*, Pietro Marsella*, Ben Pan*, Silas Alberti
 
