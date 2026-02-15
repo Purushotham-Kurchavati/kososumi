@@ -17,15 +17,25 @@ Coding is an iterative process – you write a program, execute it, evaluate the
 
 We explore reinforcement learning in a multi-turn setting, using intermediate feedback from the environment, and masking model thoughts to avoid exploding context over multiple turns.
 
-Our model, `Kevin-32B = K(kernel D)` ,outperforms frontier reasoning models on kernel generation. Moreover, our results show that multi-turn training makes the model more effective at self-refinement compared to single-turn training.
+Our model, <mark>Kevin-32B = K(kernel D)</mark> ,outperforms frontier reasoning models on kernel generation. Moreover, our results show that multi-turn training makes the model more effective at self-refinement compared to single-turn training.
 
 # **Multi-Turn Training Method**
 
-We use KernelBench, a dataset of 250 PyTorch-based classic deep learning tasks. It measures a model’s ability to replace the PyTorch operators with optimized CUDA kernels. We focus on the first two levels, each containing 100 tasks. Level 1 includes foundational tasks such as matrix multiplication, convolution, and loss functions, while level 2 consists of fused operators. We train on 180 tasks of these two levels, with a holdout set of 20 tasks.
+We use `KernelBench`, a dataset of 250 PyTorch-based classic deep learning tasks. It measures a model’s ability to replace the PyTorch operators with optimized CUDA kernels. We focus on the first two levels, each containing 100 tasks. Level 1 includes foundational tasks such as matrix multiplication, convolution, and loss functions, while level 2 consists of fused operators. We train on 180 tasks of these two levels, with a holdout set of 20 tasks.
 
 During training, the model goes through an iterative feedback loop: we extract feedback from a generated kernel and have the model refine it. If the kernel fails to compile, we pass the model the error trace and ask it to fix it. If it’s correct, we measure the runtime and ask the model to improve it further.
 
 Our initial approach constructs the trajectories as follows. Starting with the initial prompt, we append the chain of thought, kernel, and evaluation information after each refinement step. We then assign a single reward to the entire trajectory—defined as the maximum score achieved by any kernel—and use this sequence for training.
 
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/0ec36526d97ed100edc20d8fd7021172aead0d2e-1916x1002.png" width="800"/>
+  <br/>
+  <em>Figure: Kevin-32B architecture overview</em>
+</p>
 
 
+<p align="center">
+  <img src=https://cdn.sanity.io/images/2mc9cv2v/production/57fdfaa07456086eb157d40def0cb9fb44747686-1882x1000.pnghttps://cdn.sanity.io/images/2mc9cv2v/production/57fdfaa07456086eb157d40def0cb9fb44747686-1882x1000.png
+  <br/>
+  <em>Figure: Multi-turn RL workflow for Kevin-32B</em>
+</p>
