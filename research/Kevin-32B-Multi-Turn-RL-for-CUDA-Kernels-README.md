@@ -32,10 +32,3 @@ Our initial approach constructs the trajectories as follows. Starting with the i
   <br/>
   <em>Figure: Kevin-32B architecture overview</em>
 </p>
-
-
-<p align="center">
-  <img src=https://cdn.sanity.io/images/2mc9cv2v/production/57fdfaa07456086eb157d40def0cb9fb44747686-1882x1000.pnghttps://cdn.sanity.io/images/2mc9cv2v/production/57fdfaa07456086eb157d40def0cb9fb44747686-1882x1000.png
-  <br/>
-  <em>Figure: Multi-turn RL workflow for Kevin-32B</em>
-</p>
