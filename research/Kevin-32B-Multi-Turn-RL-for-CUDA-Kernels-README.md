@@ -17,7 +17,7 @@ Coding is an iterative process – you write a program, execute it, evaluate the
 
 We explore reinforcement learning in a multi-turn setting, using intermediate feedback from the environment, and masking model thoughts to avoid exploding context over multiple turns.
 
-Our model,`Kevin-32B = K(kernel D)`,outperforms frontier reasoning models on kernel generation. Moreover, our results show that multi-turn training makes the model more effective at self-refinement compared to single-turn training.
+Our model, `Kevin-32B = K(kernel D)` ,outperforms frontier reasoning models on kernel generation. Moreover, our results show that multi-turn training makes the model more effective at self-refinement compared to single-turn training.
 
 # **Multi-Turn Training Method**
 
