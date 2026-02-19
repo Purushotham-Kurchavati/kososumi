@@ -36,6 +36,15 @@ Our initial approach constructs the trajectories as follows. Starting with the i
 However, this approach presents several problems:
 
 **Exploding context window:** reasoning models generate long chains of thought. With this approach, the length of the trajectory can easily reach 50-100k tokens after just a few passes, becoming prohibitive for training.
+
+
+
 **Sample inefficiency and credit assignment:** we are assigning a single reward for the entire trajectory even though we generated multiple kernels. This provides no signal on which refinement step actually improved correctness or performance. The rewards should be assigned to refinement steps based on their contribution to the final result.
 To fix the exploding context length, we discard the longest part of the trajectory — the chain of thought. Each prompt will now only include the previously generated kernels and evaluation results. To still retain information about the thinking process of the previous step, we ask the model to generate a brief summary of its own thought process, which is then passed to the subsequent contexts.
+
+To fix the exploding context length, we discard the longest part of the trajectory — the chain of thought. Each prompt will now only include the previously generated kernels and evaluation results. To still retain information about the thinking process of the previous step, we ask the model to generate a brief summary of its own thought process, which is then passed to the subsequent contexts.
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/57fdfaa07456086eb157d40def0cb9fb44747686-1882x1000.png" width="850"/>
+</p>
 
