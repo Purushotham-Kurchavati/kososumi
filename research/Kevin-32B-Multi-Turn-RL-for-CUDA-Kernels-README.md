@@ -48,3 +48,10 @@ To fix the exploding context length, we discard the longest part of the trajecto
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/57fdfaa07456086eb157d40def0cb9fb44747686-1882x1000.png" width="850"/>
 </p>
 
+fix #1: remove chain of thought for inference
+
+To address sample inefficiency, we choose a more expressive reward function. We model the refinement of kernels as a Markov decision process, setting the reward of a given response as the discounted sum of scores of the current kernel and all subsequent ones. Each refinement step thus becomes its own training sample.
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/0702d9ff633bd0c47ce878455dd758f119d478bc-1802x974.png" width="850"/>
+</p>
