@@ -55,3 +55,8 @@ To address sample inefficiency, we choose a more expressive reward function. We 
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/0702d9ff633bd0c47ce878455dd758f119d478bc-1802x974.png" width="850"/>
 </p>
+
+fix #2: reward as a discounted sum of scores
+
+# **Results**
+For each task, we sample 16 trajectories in parallel with 8 serial refinement steps.  A trajectory's correctness is 1 if it contains at least one kernel that passes the unit tests and 0 otherwise. Its performance score is the speedup over reference implementation of the fastest correct kernel. For each task’s correctness or performance, we define **best@16** as the maximum across all trajectories and **avg@16** as the mean across the trajectories.
