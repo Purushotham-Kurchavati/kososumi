@@ -60,3 +60,18 @@ fix #2: reward as a discounted sum of scores
 
 # **Results**
 For each task, we sample 16 trajectories in parallel with 8 serial refinement steps.  A trajectory's correctness is 1 if it contains at least one kernel that passes the unit tests and 0 otherwise. Its performance score is the speedup over reference implementation of the fastest correct kernel. For each task’s correctness or performance, we define **best@16** as the maximum across all trajectories and **avg@16** as the mean across the trajectories.
+
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/936f69abff9f110a0fd2bcb85f1b76476ea9a7a6-4096x1743.png" width="1000"/>
+</p>
+
+Given 8 refinement steps, Kevin-32B gets 65% of its attempts correct on average across the entire dataset, significantly surpassing QwQ-32B and frontier models. It solves 89% of the dataset, whereas o4-mini and o3 only solve 53% and 51%, respectively. Across the dataset, Kevin-32B achieves a best@16 speedup of 1.41x, outperforming frontier models.
+
+Kevin-32B is especially effective on level 2 tasks, achieving avg@16 correctness of 48% (vs 9.6% on o4-mini and 9.3% on o3). This suggests multi-turn training improves the model’s ability to solve more challenging tasks with longer horizons. Similarly, we notice that our model is very effective on level 2 tasks, achieving a best@16 speedup of 1.74x (vs 1.2x on o4-mini and o3).
+
+Since the holdout set only contains 20 tasks, the evaluation results have high variance. Thus, we focus our discussions on the results on the entire dataset. As shown both here and in the Test-Time Search section, the trained model performs even better on the holdout set, showing generalization to unseen tasks.
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/35be1e0d4443eafa2fb9bae5a031b68fdcb03b21-7120x6327.png" width="850"/>
+</p>
