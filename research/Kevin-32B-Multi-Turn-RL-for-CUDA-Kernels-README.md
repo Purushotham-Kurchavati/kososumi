@@ -75,3 +75,21 @@ Since the holdout set only contains 20 tasks, the evaluation results have high v
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/35be1e0d4443eafa2fb9bae5a031b68fdcb03b21-7120x6327.png" width="850"/>
 </p>
+
+# **Multi-Turn vs Single-Turn**
+Kevin-32B also demonstrates massive improvements over QwQ-32B and the single-turn trained model. At 4 refinement steps, Kevin-32B marginally outperforms the single turn model, but the gap between them widens as we increase to 8 refinement steps. This shows that multi-turn training scales better over the serial axis by encouraging more aggressive optimizations.
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/f8563936fb9cee7f8a8e549cd4092c4176b4a072-4670x2613.png" width="850"/>
+</p>
+
+One might wonder if the single-turn trained model can achieve better speedups by sampling parallel trajectories instead. However, we found that it’s not the case for this environment. Given a fixed compute budget, multi-turn inference dominates over single-turn inference, even for the single-turn trained model. Check the Single-Turn Inference section for details.
+
+# **Reward Hacking**
+
+Our initial experiments used smaller models like DeepSeek-R1-Distill-Qwen-7B, which led to several instances of reward hacking:
+
+The model simply copies the PyTorch reference implementation, thus getting rewarded for generating a correct answer with 1.0x speedup.
+The model wraps an incorrect implementation of the CUDA kernel in a try-except statement and invokes the PyTorch implementation functions as fallback.
+The model inherits from the reference implementation, bypassing the need for a CUDA implementation.
+Examples of reward hacking
