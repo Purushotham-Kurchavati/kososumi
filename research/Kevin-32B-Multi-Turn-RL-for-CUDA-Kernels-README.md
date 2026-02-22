@@ -92,4 +92,15 @@ Our initial experiments used smaller models like DeepSeek-R1-Distill-Qwen-7B, wh
 The model simply copies the PyTorch reference implementation, thus getting rewarded for generating a correct answer with 1.0x speedup.
 The model wraps an incorrect implementation of the CUDA kernel in a try-except statement and invokes the PyTorch implementation functions as fallback.
 The model inherits from the reference implementation, bypassing the need for a CUDA implementation.
+
 Examples of reward hacking
+
+<img 
+  src="https://cdn.sanity.io/images/2mc9cv2v/production/f269a3cfcd20ae735ae4a0ca2cafaf559f59f2fc-3443x1271.png" 
+  alt="Banner"
+  width="100%" 
+/>
+
+To prevent reward hacking, we impose stricter format checks on the responses. We assign a reward of 0 to responses that use PyTorch functions or that do not contain CUDA kernels.
+
+We observe that reward hacking occurs when the gap between the model capabilities and the dataset difficulty is significant. The model struggles to solve any task, so when it generates a hacked kernel, it’s the only action with a positive advantage, and thus gets reinforced significantly.
