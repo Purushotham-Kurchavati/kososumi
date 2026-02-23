@@ -100,4 +100,4 @@ While it’s great at collaborating in Slack, Teams, and Jira, it cannot manage 
 - 📌 Executive summary of Devin’s performance
 - 📊 Key productivity and efficiency metrics
 - 🧠 Strength patterns and limitations of autonomous agents
-- 🔗 Link to the full research paper ([Notion](https://www.notion.so/Devin-the-AIsoftware-engineer-2d14949aa5bc806289a5f9141055207e?source=copy_link))
+- 🔗 Link to the full research paper ([Notion](https://www.notion.so/Devin-the-AI-software-engineer-745e8c26a0da822d9a71011cf7337494?source=copy_link))
