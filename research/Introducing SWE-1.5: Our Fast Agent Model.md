@@ -64,4 +64,4 @@ One of our engineers noted that while existing agents would correctly edit a Kub
 # **Optimizing for Speed**
 Our goal for SWE-1.5 was to create the fastest coding agent experience available. To do this, we worked with Cerebras, the fastest inference provider, to deploy and optimize SWE-1.5. This included training an optimized draft model for faster speculative decoding, and building a custom request priority system for smoother end-to-end agent sessions. With a model running at up to 950 tok/s, previously negligible system delays emerged as dominant bottlenecks, forcing us to revisit several key parts of the Windsurf agent implementation. We rewrote critical components including lint checking and command execution pipelines, which reduced overhead per step by up to 2s. This is an effort we plan to continue investing in.
 
-- 🔗 Link to the full research paper ([Notion](https://www.notion.so/Introducing-SWE-1-5-Our-Fast-Agent-Model-2eb4949aa5bc8046bb8cd0f1e913481d?source=copy_link))
+- 🔗 Link to the full research paper ([Notion](https://www.notion.so/Introducing-SWE-1-5-Our-Fast-Agent-Model-36be8c26a0da83e7923181a5f842237d?source=copy_link))
