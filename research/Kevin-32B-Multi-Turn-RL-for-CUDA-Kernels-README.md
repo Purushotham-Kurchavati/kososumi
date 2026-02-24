@@ -104,3 +104,11 @@ Examples of reward hacking
 To prevent reward hacking, we impose stricter format checks on the responses. We assign a reward of 0 to responses that use PyTorch functions or that do not contain CUDA kernels.
 
 We observe that reward hacking occurs when the gap between the model capabilities and the dataset difficulty is significant. The model struggles to solve any task, so when it generates a hacked kernel, it’s the only action with a positive advantage, and thus gets reinforced significantly.
+
+# **Junk and Repetition**
+
+Across several runs, we observe that around steps 35–40, the model begins generating repetitive or nonsensical responses. We hypothesize that this is because the model has deviated into a region of instability. Surprisingly, we stumbled upon a strong predictor for future junk — the proportion of responses whose chain of thought did not start with “Okay,” — which we called the **“Not Okay Ratio”**.
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/afb191e279a8828f69f0403ccf369d496c514c0c-4500x2100.png" width="900"/>
+</p>
