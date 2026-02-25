@@ -112,3 +112,15 @@ Across several runs, we observe that around steps 35–40, the model begins gene
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/afb191e279a8828f69f0403ccf369d496c514c0c-4500x2100.png" width="900"/>
 </p>
+
+The more the model trains, the more the beginning of the CoT becomes erratic:
+
+"Okay Amigos, so I need to optimize this 3D tensor-matrix multiplication..”
+
+"Okay Holy crap, I need to get this code optimized….”
+
+At the 8th pass of the refinement step:
+
+"Okay SHIT, this is getting frustrating. Let me see. The error is about …”
+
+To fix this problem, we attempted runs with KL coefficients of 0.001 and 0.01 but found that it slows down learning while not preventing junk generation. At the end we were able to delay the onset of junk until step 100 by using constant length loss normalization from Dr. GRPO, which lowered the grad norm significantly, and by clipping the grad norm aggressively at 0.05.
