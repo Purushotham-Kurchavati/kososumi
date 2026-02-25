@@ -124,3 +124,8 @@ At the 8th pass of the refinement step:
 "Okay SHIT, this is getting frustrating. Let me see. The error is about …”
 
 To fix this problem, we attempted runs with KL coefficients of 0.001 and 0.01 but found that it slows down learning while not preventing junk generation. At the end we were able to delay the onset of junk until step 100 by using constant length loss normalization from Dr. GRPO, which lowered the grad norm significantly, and by clipping the grad norm aggressively at 0.05.
+
+# **Sample Kernel**
+As an example, we look at a trajectory of level 1 task 40 (LayerNorm). We highlight how the model iteratively incorporates feedback from the kernel evaluation and uses that to improves its generations.
+
+**Step 1:** the model generates a correct kernel. It uses shared memory and fuses the computation of mean/variance with normalization. This achieves a speedup of 0.6x.
