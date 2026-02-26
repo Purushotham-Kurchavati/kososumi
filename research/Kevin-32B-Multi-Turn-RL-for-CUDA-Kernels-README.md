@@ -129,3 +129,24 @@ To fix this problem, we attempted runs with KL coefficients of 0.001 and 0.01 bu
 As an example, we look at a trajectory of level 1 task 40 (LayerNorm). We highlight how the model iteratively incorporates feedback from the kernel evaluation and uses that to improves its generations.
 
 **Step 1:** the model generates a correct kernel. It uses shared memory and fuses the computation of mean/variance with normalization. This achieves a speedup of 0.6x.
+
+```cpp
+__shared__ float shared_sums[512]; // 256 threads * 2 values
+
+for (int s = block_size / 2; s > 0; s >>= 1) {
+    if (tid < s) {
+        shared_sums[2 * tid] += shared_sums[2 * (tid + s)];
+        shared_sums[2 * tid + 1] += shared_sums[2 * (tid + s) + 1];
+    }
+    __syncthreads();
+}
+```cpp
+__shared__ float shared_sums[512];
+// code here
+```
+
+**Step 2:** the model notices from the evaluation feedback that “The current speedup is 0.6, which means it's actually slower than the PyTorch version. That's not good. Let me think about where the bottleneck might be”. It spends most of its reasoning tokens looking for a better block size and modifies the code accordingly. The change is correct, and the speedup is now **4.27x.**
+
+**Steps 3 and 4:** the model attempts even more aggressive optimizations. It thinks about loop unrolling and reducing bank conflicts but settles on warp-level intrinsics. But it fails — first due to a correctness issue in the reduction logic, then due to an overlong chain of thought.
+
+**Step 5:** the model notices the issue in the incorrect warp-reduction implementation and fixes it. It implements a two level warp reduction succesfully. The final speedup is **9.61x.**
