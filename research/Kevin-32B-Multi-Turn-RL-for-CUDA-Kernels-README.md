@@ -173,7 +173,7 @@ __syncthreads();
 
 The full kernel is present in the appendix.
 
-#**Training Setup**
+# **Training Setup**
 We use **Group Relative Policy Optimization (GRPO),** introduced by DeepSeek as a variant of the popular Proximal Policy Optimization (PPO) algorithm. Instead of using a value network to estimate the baseline and calculate the advantage, GRPO normalizes the rewards within the group of responses sampled from the same prompt.
 
 <p align="center">
