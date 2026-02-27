@@ -150,3 +150,32 @@ __shared__ float shared_sums[512];
 **Steps 3 and 4:** the model attempts even more aggressive optimizations. It thinks about loop unrolling and reducing bank conflicts but settles on warp-level intrinsics. But it fails — first due to a correctness issue in the reduction logic, then due to an overlong chain of thought.
 
 **Step 5:** the model notices the issue in the incorrect warp-reduction implementation and fixes it. It implements a two level warp reduction succesfully. The final speedup is **9.61x.**
+
+```cpp
+// Warp-level reduction using shuffle instructions
+for (int delta = 1; delta <= 16; delta <<= 1) {
+  float other_sum = __shfl_xor_sync(0xFFFFFFFF, warp_sum, delta);
+  float other_sum_sq = __shfl_xor_sync(0xFFFFFFFF, warp_sum_sq, delta);
+  warp_sum += other_sum;
+  warp_sum_sq += other_sum_sq;
+}
+
+__shared__ float sum_warp[32];
+__shared__ float sum_sq_warp[32];
+__shared__ float results[2]; // [mean, inv_std]
+
+if (warp_id == 0) {
+  sum_warp[warp_lane] = warp_sum;
+  sum_sq_warp[warp_lane] = warp_sum_sq;
+}
+__syncthreads();
+```
+
+The full kernel is present in the appendix.
+
+#**Training Setup**
+We use **Group Relative Policy Optimization (GRPO),** introduced by DeepSeek as a variant of the popular Proximal Policy Optimization (PPO) algorithm. Instead of using a value network to estimate the baseline and calculate the advantage, GRPO normalizes the rewards within the group of responses sampled from the same prompt.
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/b01ff2de149e67f866c3a503e34d7591adfdeeff-2228x506.png" width="900"/>
+</p>
