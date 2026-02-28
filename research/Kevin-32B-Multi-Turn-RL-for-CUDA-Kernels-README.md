@@ -179,3 +179,13 @@ We use **Group Relative Policy Optimization (GRPO),** introduced by DeepSeek as 
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/b01ff2de149e67f866c3a503e34d7591adfdeeff-2228x506.png" width="900"/>
 </p>
+
+We use vLLM for inference and DeepSpeed Zero-3 for offloading optimizer states. We train with 8 tasks per batch and 16 trajectories per task. We use GRPO with 2 gradient steps per batch. Our base model is **QwQ-32B**
+
+After the response generation is done, each GPU offloads its vLLM engine to CPU memory and evaluates the kernels it generated. For each response, we check if the response is formatted correctly and extract the CUDA kernel. We then compile and execute the code to test for correctness with randomized tensors. If correct, we profile the kernel’s runtime.
+
+Responses receive 0.3 reward for passing the correctness checks and an additional performance reward equal to the speedup obtained over the reference implementation.
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/9c7de03dc5e05d2a89b47da5ec528693d0ea5fef-1458x722.png" width="850"/>
+</p>
