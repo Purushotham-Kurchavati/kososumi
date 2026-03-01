@@ -201,3 +201,6 @@ A sneakier bug in the KernelBench’s evaluation harness caused the tested kerne
 # **Single-Turn Training Setup**
 We use max_grad_norm = 0.5, lr = constant 2e-6 with warmup ratio 0.03, max_prompt_length = 8192, max_response_length = 16384. We use Clip-High from DAPO with eps_high = 0.28. We set the KL coefficient to 0 to allow the model to deviate freely from the base policy.
 
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/2cbb449e7aaf59d51848907b7e7c9f7e87c4c84a-1938x847.png" width="850"/>
+</p>
