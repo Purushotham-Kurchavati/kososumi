@@ -204,3 +204,17 @@ We use max_grad_norm = 0.5, lr = constant 2e-6 with warmup ratio 0.03, max_promp
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/2cbb449e7aaf59d51848907b7e7c9f7e87c4c84a-1938x847.png" width="850"/>
 </p>
+
+
+We sandboxed evaluation so that fatal errors, such as CUDA illegal memory accesses, do not crash the training process.
+
+Because many tasks in KernelBench use very small input tensors, the benchmark ends up measuring kernel‑launch overhead more than actual kernel execution time. To address this, we enlarged the tensor dimensions of the affected tasks.
+
+A sneakier bug in the KernelBench’s evaluation harness caused the tested kernel to recycle the output tensor from the reference implementation as its own tensor output. As a result of this, a kernel that only computes (correctly) a portion of the output tensor would still pass the correctness check. We address this by first running the tested kernel and then the reference implementation, thus avoiding this hack.
+
+# **Single-Turn Training Setup**
+We use max_grad_norm = 0.5, lr = constant 2e-6 with warmup ratio 0.03, max_prompt_length = 8192, max_response_length = 16384. We use Clip-High from DAPO with eps_high = 0.28. We set the KL coefficient to 0 to allow the model to deviate freely from the base policy.
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/2cbb449e7aaf59d51848907b7e7c9f7e87c4c84a-1938x847.png" width="850"/>
+</p>
