@@ -204,3 +204,11 @@ We use max_grad_norm = 0.5, lr = constant 2e-6 with warmup ratio 0.03, max_promp
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/2cbb449e7aaf59d51848907b7e7c9f7e87c4c84a-1938x847.png" width="850"/>
 </p>
+
+We observe that the single turn model improves significantly over the base model, but the reward starts to plateau after 25 steps.
+
+# **Multi-Turn Training Setup**
+We score the correctness and performance of each trajectory by its best kernel. When a kernel is not correct, the performance score of that kernel is 0. In our final training run each forward pass consists of 16 parallel trajectories with 4 refinement steps each, and a discount factor of 0.4. Unlike in single turn training, the reward now steadily increases.
+
+The response length initially decreases as the model learns to use its reasoning tokens more efficiently for kernel generation. After step 25, the response length increases as the model attempts more sophisticated solutions. Following DeepScaleR, we extend the max response length from 16K to 22K tokens at step 30.
+
