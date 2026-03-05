@@ -212,3 +212,11 @@ We score the correctness and performance of each trajectory by its best kernel. 
 
 The response length initially decreases as the model learns to use its reasoning tokens more efficiently for kernel generation. After step 25, the response length increases as the model attempts more sophisticated solutions. Following DeepScaleR, we extend the max response length from 16K to 22K tokens at step 30.
 
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/04d95138027c2b75bfc6d348f858382a130d369a-2750x1026.png" width="900"/>
+</p>
+
+# **More Results & Ablations**
+Inference Time Scaling
+We also investigated **scaling along the parallel and serial axes for our multi-turn model.** For our first experiment at inference time, we used 16 parallel trajectories with 8 refinement steps. Again, we see the multi-turn model scales better with more refinement steps.
+
