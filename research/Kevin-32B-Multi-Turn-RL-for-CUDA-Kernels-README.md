@@ -220,3 +220,6 @@ The response length initially decreases as the model learns to use its reasoning
 Inference Time Scaling
 We also investigated **scaling along the parallel and serial axes for our multi-turn model.** For our first experiment at inference time, we used 16 parallel trajectories with 8 refinement steps. Again, we see the multi-turn model scales better with more refinement steps.
 
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/4fbde07b304a3519b6fdce1eb9a1b8efae0f247b-6220x2832.png" width="900"/>
+</p>
