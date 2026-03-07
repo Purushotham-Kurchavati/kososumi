@@ -224,11 +224,12 @@ We also investigated **scaling along the parallel and serial axes for our multi-
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/4fbde07b304a3519b6fdce1eb9a1b8efae0f247b-6220x2832.png" width="900"/>
 </p>
 
-
-# **More Results & Ablations**
-Inference Time Scaling
-We also investigated **scaling along the parallel and serial axes for our multi-turn model.** For our first experiment at inference time, we used 16 parallel trajectories with 8 refinement steps. Again, we see the multi-turn model scales better with more refinement steps.
+For our second experiment, we increased the number of parallel trajectories to 64 while keeping only 4 refinement steps. This achieves best@64 correctness of 89.5% and performance of 1.28x, slightly worse than best@16 for 8 refinement steps.
 
 <p align="center">
-  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/4fbde07b304a3519b6fdce1eb9a1b8efae0f247b-6220x2832.png" width="900"/>
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/473f78b22de115ccc2fc228b78a8c65490e0906c-6228x2831.png" width="900"/>
 </p>
+
+We investigate the effects of scaling inference along the parallel or serial axis. We use pass@k performance that represents the estimated performance of k generations. We compute the metric using an unbiased estimator similar to <mark>Chen et al.</mark>   that has a lower variance than avg@k.
+
+We then try to find a suitable law to model our experimental data. We notice that the contribution from both refinement steps and parallel trajectories looks like a power law at this (small) order of magnitude. Moreover, the performance metric should saturate since kernel speedups are finite. Hence, we decided to fit the following law (which presents a power law behavior at small orders of magnitude and gets diminishing returns as the amount of compute increases):
