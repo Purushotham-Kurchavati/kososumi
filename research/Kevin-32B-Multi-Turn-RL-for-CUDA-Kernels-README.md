@@ -233,3 +233,9 @@ For our second experiment, we increased the number of parallel trajectories to 6
 We investigate the effects of scaling inference along the parallel or serial axis. We use pass@k performance that represents the estimated performance of k generations. We compute the metric using an unbiased estimator similar to <mark>Chen et al.</mark>   that has a lower variance than avg@k.
 
 We then try to find a suitable law to model our experimental data. We notice that the contribution from both refinement steps and parallel trajectories looks like a power law at this (small) order of magnitude. Moreover, the performance metric should saturate since kernel speedups are finite. Hence, we decided to fit the following law (which presents a power law behavior at small orders of magnitude and gets diminishing returns as the amount of compute increases):
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/9f9342a194fe8f665b161c521e6dc69bf67de0cc-2100x182.png" width="900"/>
+</p>
+
+We find that given a fixed, non-trivial inference compute budget (e.g. refinement steps * parallel trajectories ≥ 8), the optimal compute allocation is shifted towards serial refinement rather than parallel generation.
