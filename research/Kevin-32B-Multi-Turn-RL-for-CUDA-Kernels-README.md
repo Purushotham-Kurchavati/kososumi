@@ -239,3 +239,7 @@ We then try to find a suitable law to model our experimental data. We notice tha
 </p>
 
 We find that given a fixed, non-trivial inference compute budget (e.g. refinement steps * parallel trajectories ≥ 8), the optimal compute allocation is shifted towards serial refinement rather than parallel generation.
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/921a4eb2bc50d416b259cfe6b76e812e3a8bce9a-4500x2700.png" width="900"/>
+</p>
