@@ -248,4 +248,5 @@ We find that given a fixed, non-trivial inference compute budget (e.g. refinemen
 
 We previously compared the multi-turn model (Kevin-32B) and the single-turn model in the same multi-turn inference setting. But since the single-turn model was trained in a single-turn setting, a natural questions that arises is the following: given a fixed amount of compute for a model trained in a single-turn setting, can we get better inference results with single-turn inference or multi-turn inference?
 
+<img src="https://cdn.sanity.io/images/2mc9cv2v/production/15b9ca855de3761b7aebffd2670e705f56d0d12a-4050x2700.png" alt="Image">
 
