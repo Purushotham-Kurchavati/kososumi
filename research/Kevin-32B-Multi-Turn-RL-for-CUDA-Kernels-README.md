@@ -250,3 +250,11 @@ We previously compared the multi-turn model (Kevin-32B) and the single-turn mode
 
 <img src="https://cdn.sanity.io/images/2mc9cv2v/production/15b9ca855de3761b7aebffd2670e705f56d0d12a-4050x2700.png" alt="Image">
 
+For this particular environment, multi-turn inference gives generally better results than single-turn inference even when using a single-turn trained model (except for average correctness). To compare the two methods we evaluate the single-turn model with 64 parallel trajectories and only 1 step, and then compare the results to the multi-turn inference with 16 parallel trajectories and 4 refinement steps per trajectory. We split the 64 parallel trajectories for single-turn inference in 16 groups of 4 kernels, take the best@4 for each group, and average across the 16 groups. This way we can compare this metric with avg@16 from multi-turn inference (since in that case we are taking best@4 across a single trajectory). Finally we compare best@64 for single-turn inference with best@16 (4 refinement steps) for multi-turn inference.
+
+# **Reward Shaping**
+We experimented with reward shaping. For runs on smaller models, we added intermediate rewards (successful parsing, compilation, execution, …) to guide the model. However, we found that they may distract the model from updating towards the true objective — generating correct and performant kernels. We also experimented with a length penalty, as suggested by Kimi, but found that it degrades the performance of the model in our setting.
+
+For multi-turn training, we ran ablations on different reward functions. We experimented with different gamma values (0.4 vs 0.8) and how we aggregate rewards across a single trajectory — either summing or taking the maximum.
+
+In kernel generation, we fundamentally care about obtaining the kernel with the maximum trajectory (rather than optimizing for the discounted sum of scores of several kernels). We thus thought that using the max formula for reward would lead to better speedups.
