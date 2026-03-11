@@ -262,3 +262,11 @@ In kernel generation, we fundamentally care about obtaining the kernel with the 
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/a673f130f27da1d46741e1b6a1095eb259bee0db-1908x308.png" width="900"/>
 </p>
+
+We were surprised, however, to find that that summing rewards across the MDP with gamma=0.4 worked the best.
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/d8cc0c2030782023e9f04604c0b29c6bb48b5ef2-6228x2831.png" width="900"/>
+</p>
+
+Ablation of reward shaping — Multi Turn Training was done with sum of reward and gamma=0.4 (sum_gamma_0_4).
