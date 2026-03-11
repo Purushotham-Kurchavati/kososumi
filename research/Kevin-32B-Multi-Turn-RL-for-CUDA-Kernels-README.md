@@ -258,3 +258,7 @@ We experimented with reward shaping. For runs on smaller models, we added interm
 For multi-turn training, we ran ablations on different reward functions. We experimented with different gamma values (0.4 vs 0.8) and how we aggregate rewards across a single trajectory — either summing or taking the maximum.
 
 In kernel generation, we fundamentally care about obtaining the kernel with the maximum trajectory (rather than optimizing for the discounted sum of scores of several kernels). We thus thought that using the max formula for reward would lead to better speedups.
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/a673f130f27da1d46741e1b6a1095eb259bee0db-1908x308.png" width="900"/>
+</p>
