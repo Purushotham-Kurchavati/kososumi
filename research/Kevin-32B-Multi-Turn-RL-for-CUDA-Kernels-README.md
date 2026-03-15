@@ -282,3 +282,6 @@ During training, search has to be restrained in order to maintain reasonable tra
 
 For our purposes, we use a **modified version of beam-search,** which works as follows. We first perform 4 serial refinement steps across 16 trajectories, as we do at training time. At the end of this process, we rank the trajectories according to the fastest kernel generated and keep the best 4. We then replicate each of these trajectories 4 times (for a total of 16 trajectories) and repeat the process. Besides being a general method, it boosts the model performance significantly, achieving a mean speedup of **1.56x** across the entire dataset.
 
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/90626361d458b18496a9efcfd972fd5c04708b89-2031x960.png" width="900"/>
+</p>
