@@ -270,3 +270,15 @@ We were surprised, however, to find that that summing rewards across the MDP wit
 </p>
 
 Ablation of reward shaping — Multi Turn Training was done with sum of reward and gamma=0.4 (sum_gamma_0_4).
+
+# **Parallel Trajectories**
+We also experimented with quadrupling the number of parallel trajectories from 16 to 64 during training, for a training batch size of 64 * 4 * 8 = 2048. In theory, this makes the advantage estimation less noisy, but we found no significant differences in the evaluated best@16 and avg@16 performance. Moreover, junk starts to appear earlier around step 30 (60 gradient steps).
+
+# **Data Distribution**
+Early in the project, we attempted runs with an easy subset of level 1 tasks on DeepSeek-R1-Distill-Qwen-14B. We found that the reward plateaus and the model overfits to a single difficulty level. Moreover, the model only learns a limited set of optimization techniques. Therefore, we think it is important to have a balanced and diverse distribution of difficulty levels in the dataset.
+
+# **Test-Time Search**
+During training, search has to be restrained in order to maintain reasonable training times. At test time however, we are free to use more complex test-time techniques to further boost performance.
+
+For our purposes, we use a **modified version of beam-search,** which works as follows. We first perform 4 serial refinement steps across 16 trajectories, as we do at training time. At the end of this process, we rank the trajectories according to the fastest kernel generated and keep the best 4. We then replicate each of these trajectories 4 times (for a total of 16 trajectories) and repeat the process. Besides being a general method, it boosts the model performance significantly, achieving a mean speedup of **1.56x** across the entire dataset.
+
