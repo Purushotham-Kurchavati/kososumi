@@ -291,3 +291,5 @@ As expected, we get diminishing returns with increased test-time compute, though
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/f972d85ded1edfb0764c252bbb0ada9438ed73bb-3600x2100.png" width="900"/>
 </p>
+
+**Beam-search test-time inference.** Compute Time is measured per-kernel, on a single H200 GPU. Note that it also includes stalling for eval, with the effective inference time accounting for about 45% of the total compute time.
