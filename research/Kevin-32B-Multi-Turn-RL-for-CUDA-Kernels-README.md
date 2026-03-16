@@ -285,3 +285,9 @@ For our purposes, we use a **modified version of beam-search,** which works as f
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/90626361d458b18496a9efcfd972fd5c04708b89-2031x960.png" width="900"/>
 </p>
+
+As expected, we get diminishing returns with increased test-time compute, though average performance still improves even after several hours.
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/f972d85ded1edfb0764c252bbb0ada9438ed73bb-3600x2100.png" width="900"/>
+</p>
