@@ -297,3 +297,15 @@ As expected, we get diminishing returns with increased test-time compute, though
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/ee43b61259ce3f718a52e30e48ff8c61e70361c9-3600x2100.png" width="900"/>
 </p>
+
+
+We attempted several different variants of our version of beam search, by modifying number of trajectories, beam width, and number of refinement steps. Interestingly, we observe that **settings with a higher median speedup have a lower mean speedup,** and vice versa.
+
+We attribute this behavior to each technique having a different position in the Pareto frontier of exploration / exploitation: by being more exploitative, kernels can achieve consistent speedups, though they might miss out on very aggressive optimizations that increase the mean significantly.
+
+# **Future Work**
+We believe this work to be only the start of exploring methods to train coding agents. Given more time and compute, here are the things we would like to try:
+
+Learning a value network and training with PPO. In fact, the baseline estimator is computed per-refinement-step rather than per-prompt
+Integrate more sophisticated search methods, such as beam search, at training time (rather than just parallel + serial)
+Applying multi-turn training method to more general coding environments
