@@ -309,3 +309,16 @@ We believe this work to be only the start of exploring methods to train coding a
 Learning a value network and training with PPO. In fact, the baseline estimator is computed per-refinement-step rather than per-prompt
 Integrate more sophisticated search methods, such as beam search, at training time (rather than just parallel + serial)
 Applying multi-turn training method to more general coding environments
+
+
+# **Conclusion**
+In this work we propose a method that generalizes to any multi-turn environment with intermediate rewards. We show that this method achieves better results than single-turn GRPO.
+
+We believe that end-to-end training will be a crucial component of future agents. While hand-crafted multi-LLM workflows can offer short-term gains, they rely heavily on human heuristics and do not scale. In contrast, more general methods let the model freely explore different trajectories (search), and then learn these long-horizon dynamics. Through its interaction with the coding environment, the model produces streams of experiences and continuously adapts through feedback. We hope methods like this to be a first step towards autonomous coding agents.
+
+We have to learn the bitter lesson that building in how we think we think does not work in the long run. The bitter lesson is based on the historical observations that 1) AI researchers have often tried to build knowledge into their agents, 2) this always helps in the short term, and is personally satisfying to the researcher, but 3) in the long run it plateaus and even inhibits further progress, and 4) breakthrough progress eventually arrives by an opposing approach based on **scaling computation by search and learning.** Richard Sutton, The Bitter Lesson
+
+
+HuggingFace: https://huggingface.co/cognition-ai/Kevin-32B
+
+# **Appendix** 
