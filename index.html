@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kososumi AI — a multi-agent platform for building intelligent workflows."
+    />
+    <title>Kososumi AI</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="bg" aria-hidden="true">
+      <div class="bg__grid"></div>
+      <div class="bg__dots"></div>
+      <div class="bg__glow"></div>
+    </div>
+
+    <header class="nav">
+      <div class="container nav__inner">
+        <a class="logo" href="#home" aria-label="Kososumi AI Home">
+          <span class="logo__mark" aria-hidden="true"></span>
+          <span class="logo__text">Kososumi AI</span>
+        </a>
+
+        <nav class="nav__links" aria-label="Primary">
+          <a class="nav__link" href="#home">Home</a>
+          <a class="nav__link" href="#features">Features</a>
+          <a class="nav__link" href="#agents">Agents</a>
+          <a class="nav__link" href="#community">Community</a>
+          <a
+            class="nav__link nav__link--github"
+            href="https://github.com/Purushotham-Kurchavati/kososumi"
+            target="_blank"
+            rel="noreferrer"
+            >GitHub</a
+          >
+        </nav>
+
+        <button class="nav__burger" type="button" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <div class="nav__mobile" hidden>
+        <div class="container nav__mobileInner">
+          <a class="nav__mobileLink" href="#home">Home</a>
+          <a class="nav__mobileLink" href="#features">Features</a>
+          <a class="nav__mobileLink" href="#agents">Agents</a>
+          <a class="nav__mobileLink" href="#community">Community</a>
+          <a
+            class="nav__mobileLink nav__mobileLink--github"
+            href="https://github.com/Purushotham-Kurchavati/kososumi"
+            target="_blank"
+            rel="noreferrer"
+            >View on GitHub</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="section hero">
+        <div class="container hero__inner">
+          <div class="hero__content reveal">
+            <p class="hero__kicker">Hey there! 👋</p>
+            <h1 class="hero__title">
+              Kososumi AI is a multi-agent platform for building intelligent
+              workflows.
+            </h1>
+            <p class="hero__sub">
+              Create, automate, and deploy AI agents that handle real-world
+              tasks in your daily life.
+            </p>
+
+            <div class="hero__cta">
+              <a class="btn btn--primary" href="#features">Get Started</a>
+              <a
+                class="btn btn--secondary"
+                href="https://github.com/Purushotham-Kurchavati/kososumi"
+                target="_blank"
+                rel="noreferrer"
+                >View GitHub</a
+              >
+            </div>
+
+            <div class="hero__meta">
+              <div class="metaPill">
+                <span class="metaPill__dot" aria-hidden="true"></span>
+                Developer-first • Minimal • Powerful
+              </div>
+              <div class="metaPill metaPill--outline">
+                Multi-agent workflows • Automations • Integrations
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__panel reveal" aria-hidden="true">
+            <div class="terminal">
+              <div class="terminal__top">
+                <span class="terminal__dot terminal__dot--r"></span>
+                <span class="terminal__dot terminal__dot--y"></span>
+                <span class="terminal__dot terminal__dot--g"></span>
+                <span class="terminal__title">kososumi@agents</span>
+              </div>
+              <div class="terminal__body">
+                <div class="terminal__line">
+                  <span class="terminal__prompt">$</span> kososumi init
+                </div>
+                <div class="terminal__line terminal__line--muted">
+                  booting multi-agent runtime…
+                </div>
+                <div class="terminal__line">
+                  <span class="terminal__prompt">$</span> kososumi run
+                  workflow/finance
+                </div>
+                <div class="terminal__line terminal__line--ok">
+                  ✓ expense tracker active (realtime)
+                </div>
+                <div class="terminal__line">
+                  <span class="terminal__prompt">$</span> kososumi run
+                  workflow/research
+                </div>
+                <div class="terminal__line terminal__line--ok">
+                  ✓ summaries streaming (citations enabled)
+                </div>
+                <div class="terminal__line terminal__caret" aria-hidden="true">
+                  <span class="terminal__prompt">$</span>
+                  <span class="caret"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="container">
+          <div class="sectionHead reveal">
+            <p class="sectionHead__kicker">Features</p>
+            <h2 class="sectionHead__title">Built for real workflows.</h2>
+            <p class="sectionHead__sub">
+              A clean interface on top of a powerful multi-agent engine.
+            </p>
+          </div>
+
+          <div class="grid grid--4">
+            <article class="card reveal">
+              <div class="card__icon" aria-hidden="true">🤖</div>
+              <h3 class="card__title">Multi-Agent System</h3>
+              <p class="card__text">Run multiple AI agents working together</p>
+            </article>
+            <article class="card reveal">
+              <div class="card__icon" aria-hidden="true">🧩</div>
+              <h3 class="card__title">Workflow Automation</h3>
+              <p class="card__text">
+                Build flows like n8n but with AI intelligence
+              </p>
+            </article>
+            <article class="card reveal">
+              <div class="card__icon" aria-hidden="true">⚡</div>
+              <h3 class="card__title">Real-Time Intelligence</h3>
+              <p class="card__text">
+                Agents think, adapt, and act dynamically
+              </p>
+            </article>
+            <article class="card reveal">
+              <div class="card__icon" aria-hidden="true">🔌</div>
+              <h3 class="card__title">Plug &amp; Play Integrations</h3>
+              <p class="card__text">
+                Connect APIs, tools, and services easily
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="agents" class="section">
+        <div class="container">
+          <div class="sectionHead reveal">
+            <p class="sectionHead__kicker">Agents</p>
+            <h2 class="sectionHead__title">AI Agents for Everyday Life</h2>
+            <p class="sectionHead__sub">
+              Small, focused agents that ship outcomes — chained into workflows.
+            </p>
+          </div>
+
+          <div class="grid grid--3">
+            <article class="card card--agent reveal">
+              <div class="card__badge">Finance Agent</div>
+              <h3 class="card__title">Tracks expenses &amp; budgets</h3>
+              <p class="card__text">
+                Connect accounts, categorize spend, and generate weekly summaries.
+              </p>
+            </article>
+            <article class="card card--agent reveal">
+              <div class="card__badge">Research Agent</div>
+              <h3 class="card__title">Summarizes data</h3>
+              <p class="card__text">
+                Turn links, docs, and datasets into concise briefs and action items.
+              </p>
+            </article>
+            <article class="card card--agent reveal">
+              <div class="card__badge">Productivity Agent</div>
+              <h3 class="card__title">Automates tasks</h3>
+              <p class="card__text">
+                Schedule, triage, and execute routines across tools — on autopilot.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="community" class="section">
+        <div class="container">
+          <div class="callout reveal">
+            <div class="callout__content">
+              <p class="callout__kicker">Community</p>
+              <h2 class="callout__title">Build with us.</h2>
+              <p class="callout__text">
+                Kososumi started as research — now it’s becoming a startup. If you
+                like developer-first tools, jump in early.
+              </p>
+            </div>
+            <div class="callout__actions">
+              <a class="btn btn--primary" href="#home">Back to top</a>
+              <a
+                class="btn btn--secondary"
+                href="https://github.com/Purushotham-Kurchavati/kososumi"
+                target="_blank"
+                rel="noreferrer"
+                >Star on GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__text">Built by Purushotham</p>
+        <a
+          class="footer__link"
+          href="https://github.com/Purushotham-Kurchavati/kososumi"
+          target="_blank"
+          rel="noreferrer"
+          >GitHub</a
+        >
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+
