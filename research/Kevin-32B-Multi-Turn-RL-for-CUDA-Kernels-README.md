@@ -322,3 +322,7 @@ We have to learn the bitter lesson that building in how we think we think does n
 HuggingFace: https://huggingface.co/cognition-ai/Kevin-32B
 
 # **Appendix** 
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/9772736cd684ac37896bf082d7151285ef9675dc-2000x1018.png" width="850"/>
+</p>
