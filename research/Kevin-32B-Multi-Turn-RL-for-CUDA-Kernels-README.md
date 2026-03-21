@@ -410,3 +410,6 @@ __global__ void layer_norm_kernel(const float* __restrict__ x,
 }
 ```
 
+# **Example Prompt**
+Our prompt is very similar to the **KernelBench prompt.** Here is an example.
+
