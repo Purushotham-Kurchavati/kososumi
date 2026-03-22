@@ -496,3 +496,17 @@ class ModelNew(nn.Module):
 
     def forward(self, a, b):
         return self.elementwise_add.elementwise_add_cuda(a, b)
+
+# **Citation**
+
+```bibtex
+@misc{kevin-multi-turn-rl,
+  title={Kevin: Multi-Turn RL for Generating CUDA Kernels}, 
+  author={Carlo Baronio and Pietro Marsella and Ben Pan and Simon Guo and Silas Alberti},
+  year={2025},
+  eprint={2507.11948},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG},
+  url={https://arxiv.org/abs/2507.11948}
+}
+```
