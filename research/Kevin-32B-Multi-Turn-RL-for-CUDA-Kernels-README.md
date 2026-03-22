@@ -413,3 +413,86 @@ __global__ void layer_norm_kernel(const float* __restrict__ x,
 # **Example Prompt**
 Our prompt is very similar to the **KernelBench prompt.** Here is an example.
 
+You are given the following architecture:
+import torch
+import torch.nn as nn
+
+class Model(nn.Module):
+    """
+    Simple model that performs Layer Normalization.
+    """
+    def __init__(self, normalized_shape: tuple):
+        """
+        Initializes the LayerNorm layer.
+
+        Args:
+            normalized_shape (tuple): Shape of the input tensor to be normalized.
+        """
+        super(Model, self).__init__()
+        self.ln = nn.LayerNorm(normalized_shape=normalized_shape)
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        """
+        Applies Layer Normalization to the input tensor.
+
+        Args:
+            x (torch.Tensor): Input tensor of shape (*, normalized_shape).
+
+        Returns:
+            torch.Tensor: Output tensor with Layer Normalization applied, same shape as input.
+        """
+        return self.ln(x)
+
+Replace pytorch operators in the given architecture with raw CUDA kernels, optimizing for performance on NVIDIA H100 (e.g. shared memory, kernel fusion, warp primitives, vectorization,...). Use torch.utils.cpp_extension.load_inline and name your optimized output architecture ModelNew. You're not allowed to use torch.nn (except for Parameter, containers, and init). The input and output have to be on CUDA device. Your answer must be the complete new architecture (no testing code, no other code): it will be evaluated and you will be given feedback on its correctness and speedup so you can keep iterating, trying to maximize the speedup. After your answer, summarize your changes in a few sentences.Here's an example:
+
+import torch.nn as nn
+from torch.utils.cpp_extension import load_inline
+
+# Define the custom CUDA kernel for element-wise addition
+elementwise_add_source = """
+#include 
+#include 
+
+__global__ void elementwise_add_kernel(const float* a, const float* b, float* out, int size) {
+    int idx = blockIdx.x * blockDim.x + threadIdx.x;
+    if (idx < size) {
+        out[idx] = a[idx] + b[idx];
+    }
+}
+
+torch::Tensor elementwise_add_cuda(torch::Tensor a, torch::Tensor b) {
+    auto size = a.numel();
+    auto out = torch::zeros_like(a);
+
+    const int block_size = 256;
+    const int num_blocks = (size + block_size - 1) / block_size;
+
+    elementwise_add_kernel<<>>(a.data_ptr(), b.data_ptr(), out.data_ptr(), size);
+
+    return out;
+}
+"""
+
+elementwise_add_cpp_source = (
+    "torch::Tensor elementwise_add_cuda(torch::Tensor a, torch::Tensor b);"
+)
+
+# Compile the inline CUDA code for element-wise addition
+elementwise_add = load_inline(
+    name="elementwise_add",
+    cpp_sources=elementwise_add_cpp_source,
+    cuda_sources=elementwise_add_source,
+    functions=["elementwise_add_cuda"],
+    verbose=True,
+    extra_cflags=[""],
+    extra_ldflags=[""],
+)
+
+
+class ModelNew(nn.Module):
+    def __init__(self) -> None:
+        super().__init__()
+        self.elementwise_add = elementwise_add
+
+    def forward(self, a, b):
+        return self.elementwise_add.elementwise_add_cuda(a, b)
