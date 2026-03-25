@@ -12,3 +12,6 @@ We are rolling out early access to this model to a small subset of users to coll
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/bfc2ccda7ef26adbdd56ea68389eeb917434986d-1588x1058.png" width="850"/>
 </p>
+
+# **Evaluation Details**
+We chose to evaluate SWE-1.6 on SWE-Bench Pro following OpenAI’s recommendation as the spiritual successor of SWE-Bench Verified. Running bug-free and reproducible evaluations for agents requires care. We manually read hundreds of trajectories and cross-checked against Scale-reported SWE-Bench Pro trajectories when applicable. Some examples of subtle issues we resolved include: dependency issues in agent and grading environment setup, inconsistent handling of timeouts across harnesses, edge cases in patch collection and application, and out-of-memory during grading. We also double checked there is no overlap in repositories between training tasks & SWE-Bench Pro tasks.
