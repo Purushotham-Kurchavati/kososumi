@@ -20,3 +20,7 @@ For Claude Opus 4.6 and Sonnet 4.6 we used high reasoning effort and reported th
 
 # **Scaling RL**
 Since our early attempts at agentic RL, including Kevin-32B and SWE-grep, we have continued to refine our algorithm for stable training. We have significantly scaled the number of RL environments while further improving data quality. As a consequence, we observe continued improvements as we train for more steps.
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/033e797acd7bb94a63884b4979bc6fa3801d80d4-1722x1006.png" width="850"/>
+</p>
