@@ -24,3 +24,5 @@ Since our early attempts at agentic RL, including Kevin-32B and SWE-grep, we hav
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/033e797acd7bb94a63884b4979bc6fa3801d80d4-1722x1006.png" width="850"/>
 </p>
+
+It has been fun to observe the model learning to think harder and iterate for more turns on hard SWE-Bench Pro problems. On the flip side, we observe overthinking and excessive self-verification in our own dogfooding. Figuring out the right balance between interactivity and long-horizon thinking is an active area of research.
