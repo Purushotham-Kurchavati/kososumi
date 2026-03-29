@@ -30,3 +30,14 @@ It has been fun to observe the model learning to think harder and iterate for mo
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/2157a11c71ec0743689e98b7a744eb5e0521c460-1638x960.png" width="850"/>
 </p>
+
+# **How we made our training 6x faster**
+Our philosophy is: first get it working, then make it fast. Since SWE-1.5, through a variety of improvements, our training stack is more stable, and training steps for SWE-1.6 now run 6x faster than they did 3 months ago (normalizing for batch size).
+
+Rollouts on long-horizon software engineering tasks often require tens or hundreds of turns interacting with the environment. With this profile in mind, we’ve made several choices that improved our rollout throughput.
+
+First, we’ve optimized our inference configurations, in particular using lower precision. However, this introduces issues like high mismatch between training and inference logprobs. We’ve made algorithmic improvements that enabled us to use rollouts in precisions as low as NVFP4, which is a numeric format optimized for Blackwell chips, and achieved 2-3x higher throughput than with BF16 or FP8.
+
+As multi-turn rollouts are made up of serial requests that share prefixes, we tag each rollout with a corresponding DP rank ID and route that rollout’s requests to the specified rank, maximizing KV cache hit rate and maintaining balanced workloads across DP ranks.
+
+Finally, we’ve significantly improved the stability and performance of our training infrastructure. SWE-1.6 was trained on thousands of GB200 NVL72 chips, requiring attention to stable networking. Moreover, we were able to accelerate our training by 1.5x using NVIDIA’s Multi-Node NVLink.
