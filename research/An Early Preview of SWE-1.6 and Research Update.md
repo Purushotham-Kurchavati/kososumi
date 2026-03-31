@@ -54,3 +54,12 @@ Thanks to our algorithmic improvements, we can neglect staleness (the number of 
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/241602ccae728b42ce3c20e625da2f82bca24af9-2612x984.png" width="900"/>
 </p>
+
+Given these assumptions, we can use the following simple model to produce a first guess for the inference/training allocation. Suppose that:
+
+We have N total GPUs, split into nᵢ inference GPUs and nₜ training GPUs,
+Each optimizer step consumes B samples,
+The inference engines sustain s_roll output tokens/sec/GPU at saturation (measured end-to-end, including prefill),
+r denotes the output-to-input token ratio,
+L_out is the average number of output tokens per trajectory,
+The trainer runs at s_train tokens/sec/GPU for the update workload.
