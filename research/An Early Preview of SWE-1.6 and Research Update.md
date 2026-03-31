@@ -50,3 +50,7 @@ A training stage that consumes those samples and runs one optimizer step wheneve
 In steady state, rollouts and training overlap, and the wall-clock time per optimizer step is set by whichever stage is slower. If inference produces samples faster than training can consume them, the sample queue grows without bound. If training is faster, then the trainer sits idle waiting for samples. A good first guess for the optimal GPU split is therefore the one that balances the two stages.
 
 Thanks to our algorithmic improvements, we can neglect staleness (the number of optimizer steps between when a rollout starts and when its samples are consumed by training) when choosing the GPU split. We also ignore the time to refresh and broadcast the updated weights to inference engines, assuming it’s negligible compared to rollout generation and the training step (or amortized asynchronously).
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/241602ccae728b42ce3c20e625da2f82bca24af9-2612x984.png" width="900"/>
+</p>
