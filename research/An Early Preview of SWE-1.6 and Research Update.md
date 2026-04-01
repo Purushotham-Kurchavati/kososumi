@@ -69,4 +69,6 @@ One practical detail is that we parameterize inference cost using (1) the measur
 
 From r, the number of total tokens per trajectory is L_tot = L_out + L_in = L_out⋅(1+r). Rollouts for a turn generate B⋅L_out output tokens in total. With nᵢ inference GPUs producing output at total rate nᵢ⋅s_roll:
 
-
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/5e430c03a2194aeb8c2f8a512e72052d7edeb57a-2956x408.png" width="900"/>
+</p>
