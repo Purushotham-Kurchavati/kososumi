@@ -63,3 +63,10 @@ The inference engines sustain s_roll output tokens/sec/GPU at saturation (measur
 r denotes the output-to-input token ratio,
 L_out is the average number of output tokens per trajectory,
 The trainer runs at s_train tokens/sec/GPU for the update workload.
+
+
+One practical detail is that we parameterize inference cost using (1) the measured output tokens/sec on the inference engines, and (2) the average output/input token ratio. This works well in our setup because we do not re-prefill the entire history at each turn, so the “input tokens” we pay are primarily the newly appended prompt tokens. We enable this by “sticking” each trajectory to an inference engine, which can then keep the trajectory’s KV cache resident across turns. As a result, the end-to-end measured output throughput (s_roll) already reflects the real prefill+decode cost, and r = in/out can be interpreted as the ratio of newly-prefilled tokens to generated tokens along the rollout.
+
+From r, the number of total tokens per trajectory is L_tot = L_out + L_in = L_out⋅(1+r). Rollouts for a turn generate B⋅L_out output tokens in total. With nᵢ inference GPUs producing output at total rate nᵢ⋅s_roll:
+
+
