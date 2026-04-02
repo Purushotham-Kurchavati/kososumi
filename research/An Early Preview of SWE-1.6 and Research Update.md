@@ -78,3 +78,5 @@ Training does work proportional to B⋅L_tot tokens. With nₜ GPUs at s_train e
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/67c8c9edfb11896898e5491bdfb4a763dc0285f1-2934x444.png" width="900"/>
 </p>
+
+Because rollout generation and training overlap, the steady-state step time is approximately t_step ≈ max(t_roll, t_train). To minimize step time, we want t_roll ≈ t_train. Setting them equal cancels B and L_out, and we can solve for the training allocation:
