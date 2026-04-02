@@ -72,3 +72,9 @@ From r, the number of total tokens per trajectory is L_tot = L_out + L_in = L_ou
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/5e430c03a2194aeb8c2f8a512e72052d7edeb57a-2956x408.png" width="900"/>
 </p>
+
+Training does work proportional to B⋅L_tot tokens. With nₜ GPUs at s_train effective tokens/sec/GPU:
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/67c8c9edfb11896898e5491bdfb4a763dc0285f1-2934x444.png" width="900"/>
+</p>
