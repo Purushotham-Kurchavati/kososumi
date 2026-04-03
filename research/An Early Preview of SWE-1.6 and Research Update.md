@@ -87,3 +87,7 @@ Because rollout generation and training overlap, the steady-state step time is a
 
 In our system each inference rank runs an optimal fixed concurrency c (the number of in-flight rollouts per engine). Each optimizer step consumes B samples, so a natural equilibrium estimate for step-based staleness is ≈ c⋅n_i/B. Plugging in the equilibrium allocation for nᵢ yields an explicit expression in terms of the same measured throughputs.
 
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/e607c6caa174199c77a75bb269f06daaf0f2ffaa-3022x436.png" width="950"/>
+</p>
+
