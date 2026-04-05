@@ -91,3 +91,9 @@ In our system each inference rank runs an optimal fixed concurrency c (the numbe
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/e607c6caa174199c77a75bb269f06daaf0f2ffaa-3022x436.png" width="950"/>
 </p>
 
+# **The missing axis: Model UX**
+The industry has moved to benchmarks like SWE-Bench Pro, which is more difficult, less contaminated, and more representative of ability to solve longer horizon tasks compared to previous SWE benchmarks. Through large-scale RL, SWE-1.6 has improved significantly on that benchmark over SWE-1.5. Qualitatively, we’ve noticed that SWE-1.6 thinks for longer and takes more turns, especially for harder queries.
+
+However, one axis these benchmarks don’t measure is “Model UX”. We’ve previously discussed some of these ideas in the “Semi-Async Valley of Death” in our SWE-grep and SWE-1.5 blog post. Back then, we optimized for the interactive side of the software engineering experience, focusing on speed.
+
+Windsurf Arena mode was a first step towards this, by measuring blind subjective preference on real coding tasks. SWE-1.5 performed better than we expected here, which we largely attribute to its speed.
