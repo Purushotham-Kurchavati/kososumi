@@ -101,3 +101,13 @@ Windsurf Arena mode was a first step towards this, by measuring blind subjective
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/282e7d048250473851e0d3aaab37a63b80ecbb5a-2100x1103.png" width="900"/>
 </p>
+
+
+However, this ranking misses some critical details. Now that background agents are attaining wider adoption, we believe the following aspects of model UX will matter even more:
+
+Ability to infer intent from incomplete context
+Visibility of chain of thought, commands being run, or todo list
+Tool call efficiency and non-invasiveness
+Adaptive thinking
+Instruction following over multiple turns
+
