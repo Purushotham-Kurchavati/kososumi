@@ -128,3 +128,8 @@ Overthinking / reasoning in loops / excessive self-verification
 High number of turns
 Executing long-running commands synchronously instead of in the background
 Using sequential tool calls when they could’ve been run in parallel
+
+We aim to improve these behaviors in our next training runs, and we’re excited to do more research around ways to improve UX in general through model training.
+
+Extra credit: We want to highlight some members of our contractor team who have made outsized contributions to data & tooling: Claudio Costa, Martin McKeaveney, Lance Fuchia, Tomer Nosrati, Merlijn Vos.
+
