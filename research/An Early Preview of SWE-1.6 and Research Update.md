@@ -115,3 +115,16 @@ Instruction following over multiple turns
 We notice that large-scale reinforcement learning can improve the model’s intelligence and incentivize it to think for longer, but can come at a tradeoff by introducing undesirable behaviors.
 
 For example, we noticed that SWE-1.6 Preview learns to use bash commands for search instead of pre-defined tools because terminal commands are more expressive and allow it to solve the task faster. But complex commands give less visibility into the model’s problem solving trajectory. Excessive use of commands is also annoying for the user, who has to manually approve each command every 10-20 seconds or so over a very long horizon, when they might otherwise have switched to a different task already.
+
+We were able to address many undesirable behaviors from SWE-1.5. Now our model:
+
+Avoids writing unnecessary unit tests and documentation
+Uses todo lists to track progress for long-running tasks
+Adopts a professional tone and keeps answers concise and clear
+Explores the codebase, gathers context, and reasons before jumping into coding
+However, we think that large-scale RL has introduced undesirable behaviors:
+
+Overthinking / reasoning in loops / excessive self-verification
+High number of turns
+Executing long-running commands synchronously instead of in the background
+Using sequential tool calls when they could’ve been run in parallel
