@@ -133,3 +133,21 @@ We aim to improve these behaviors in our next training runs, and we’re excited
 
 Extra credit: We want to highlight some members of our contractor team who have made outsized contributions to data & tooling: Claudio Costa, Martin McKeaveney, Lance Fuchia, Tomer Nosrati, Merlijn Vos.
 
+
+Avoids writing unnecessary unit tests and documentation
+Uses todo lists to track progress for long-running tasks
+Adopts a professional tone and keeps answers concise and clear
+Explores the codebase, gathers context, and reasons before jumping into coding
+However, we think that large-scale RL has introduced undesirable behaviors:
+
+Overthinking / reasoning in loops / excessive self-verification
+High number of turns
+Executing long-running commands synchronously instead of in the background
+Using sequential tool calls when they could’ve been run in parallel
+
+We aim to improve these behaviors in our next training runs, and we’re excited to do more research around ways to improve UX in general through model training.
+
+Extra credit: We want to highlight some members of our contractor team who have made outsized contributions to data & tooling: Claudio Costa, Martin McKeaveney, Lance Fuchia, Tomer Nosrati, Merlijn Vos.
+
+
+
