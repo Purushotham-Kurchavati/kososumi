@@ -1,0 +1,73 @@
+{
+  "name": "Webhook -> AI Agent -> HTTP -> Condition -> Delay",
+  "description": "MVP sample workflow for Kososumi AI",
+  "nodes": [
+    {
+      "id": "trigger_webhook",
+      "type": "webhook",
+      "name": "Incoming Webhook",
+      "config": {}
+    },
+    {
+      "id": "agent_analyze",
+      "type": "ai_agent",
+      "name": "Analyze Payload",
+      "config": {
+        "goal": "Extract priority and intent from input. Return JSON with keys: summary, priority, shouldNotify, endpoint."
+      }
+    },
+    {
+      "id": "http_notify",
+      "type": "http_request",
+      "name": "Notify Endpoint",
+      "config": {
+        "method": "POST",
+        "url": "https://httpbin.org/post",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyTemplate": {
+          "summary": "{{agent.summary}}",
+          "priority": "{{agent.priority}}"
+        }
+      }
+    },
+    {
+      "id": "check_priority",
+      "type": "condition",
+      "name": "High Priority?",
+      "config": {
+        "leftPath": "agent.priority",
+        "operator": "eq",
+        "rightValue": "high"
+      }
+    },
+    {
+      "id": "delay_node",
+      "type": "delay",
+      "name": "Throttle",
+      "config": {
+        "ms": 1000
+      }
+    }
+  ],
+  "edges": [
+    {
+      "from": "trigger_webhook",
+      "to": "agent_analyze"
+    },
+    {
+      "from": "agent_analyze",
+      "to": "http_notify"
+    },
+    {
+      "from": "http_notify",
+      "to": "check_priority"
+    },
+    {
+      "from": "check_priority",
+      "to": "delay_node",
+      "label": "true"
+    }
+  ]
+}
