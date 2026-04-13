@@ -6,3 +6,7 @@ by Rohan Choudhury, Carlo Baronio, Ben Pan, Sam Lee, Eric Lu, Steven Cao, Joe Li
 We’re releasing SWE-1.6, our latest model built for software engineering agents, and we’re making it generally available in Windsurf. SWE-1.6 is optimized for both intelligence and model UX. Moreover, it is industry-leading in both speed (up to 950 tok/s) and cost (free tier for the next 3 months).
 
 Last month, we released SWE-1.6 Preview, which improved on SWE-Bench Pro by more than 10% compared to our previous model SWE-1.5 while being post-trained on the same pre-trained model. SWE-1.6 was post-trained from scratch to jointly optimize for user experience and making the model feel smoother to use in addition to raw intelligence.
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/f511f28a1a0e1313b07a1bfa365c595a2eaeb36c-900x448.png" width="700"/>
+</p>
