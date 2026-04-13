@@ -10,3 +10,5 @@ Last month, we released SWE-1.6 Preview, which improved on SWE-Bench Pro by more
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/f511f28a1a0e1313b07a1bfa365c595a2eaeb36c-900x448.png" width="700"/>
 </p>
+
+While SWE-1.6 achieves comparable performance to the Preview model on benchmarks like SWE-Bench Pro, we’re most excited about its dramatic improvement in what we call “model UX”. As we observed in our earlier post, the preview checkpoint exhibited several behavioral issues that added friction for our users. These included:
