@@ -12,3 +12,12 @@ Last month, we released SWE-1.6 Preview, which improved on SWE-Bench Pro by more
 </p>
 
 While SWE-1.6 achieves comparable performance to the Preview model on benchmarks like SWE-Bench Pro, we’re most excited about its dramatic improvement in what we call “model UX”. As we observed in our earlier post, the preview checkpoint exhibited several behavioral issues that added friction for our users. These included:
+
+
+
+Overthinking for simple problems, taking more turns than necessary for simple tasks.
+Calling tools sequentially rather than in parallel
+Preferring shell commands rather than its own tools
+Exhibiting “looping behavior”, getting caught in a circle of identical reasoning
+Many of these axes aren’t measured by traditional benchmarks but significantly affect the infamous “vibes” users express when trying the model.
+
