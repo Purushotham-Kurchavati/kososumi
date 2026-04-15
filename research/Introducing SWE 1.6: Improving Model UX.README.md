@@ -24,3 +24,5 @@ Many of these axes aren’t measured by traditional benchmarks but significantly
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/cd85a19a6892ddd1ac1c18df4ff96d4d627cfc9b-900x563.png" width="700"/>
 </p>
+
+We were able to significantly reduce the frequency of such behaviors in SWE 1.6. The model now uses parallel tool calls more often, loops far less and relies more on its tools than the terminal. This leads to more efficient trajectories and a smoother user experience: the model obtains context much faster and requires less input from the user.
