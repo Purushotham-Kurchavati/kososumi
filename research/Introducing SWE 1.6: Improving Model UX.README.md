@@ -21,3 +21,6 @@ Preferring shell commands rather than its own tools
 Exhibiting “looping behavior”, getting caught in a circle of identical reasoning
 Many of these axes aren’t measured by traditional benchmarks but significantly affect the infamous “vibes” users express when trying the model.
 
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/cd85a19a6892ddd1ac1c18df4ff96d4d627cfc9b-900x563.png" width="700"/>
+</p>
