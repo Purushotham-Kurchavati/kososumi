@@ -26,3 +26,7 @@ Many of these axes aren’t measured by traditional benchmarks but significantly
 </p>
 
 We were able to significantly reduce the frequency of such behaviors in SWE 1.6. The model now uses parallel tool calls more often, loops far less and relies more on its tools than the terminal. This leads to more efficient trajectories and a smoother user experience: the model obtains context much faster and requires less input from the user.
+
+
+In the example below, when asked a question about the PyTorch codebase, SWE-1.6 uses parallel tool calls far more than the preview and answers the question faster.
+
