@@ -30,3 +30,4 @@ We were able to significantly reduce the frequency of such behaviors in SWE 1.6.
 
 In the example below, when asked a question about the PyTorch codebase, SWE-1.6 uses parallel tool calls far more than the preview and answers the question faster.
 
+[![Watch Demo](https://img.icons8.com/ios-filled/100/play-button-circled.png)](https://cdn.sanity.io/files/2mc9cv2v/production/a15b7fe928cf6ef96ccdb2d0ea5ec90bca10f7f9.mp4)
