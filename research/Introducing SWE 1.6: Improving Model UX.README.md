@@ -32,3 +32,4 @@ In the example below, when asked a question about the PyTorch codebase, SWE-1.6 
 
 🔗 [Watch Demo Video](https://cdn.sanity.io/files/2mc9cv2v/production/a15b7fe928cf6ef96ccdb2d0ea5ec90bca10f7f9.mp4)
 
+One contributing factor to this improvement was the introduction of a length penalty into training, which discourages unnecessarily long trajectories. This directly reduces overthinking and looping, while implicitly encouraging more efficient behaviors like parallel tool use. During training, we observed the model response length growing much more slowly than before while maintaining its intelligence and coding ability. The below ablation shows that task solve rate stays similar while assistant turns stays flat.
