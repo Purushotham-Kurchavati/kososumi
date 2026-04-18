@@ -37,3 +37,7 @@ One contributing factor to this improvement was the introduction of a length pen
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/ea4df71340c4c95c680993dae5158aca58ef7891-2118x906.png" width="900"/>
 </p>
+
+We also were able to significantly reduce occurrences of the model relying on the terminal and other improper tool use cases throughout training, avoiding cases where Windsurf users have to manually accept commands instead than letting the agent work continuously.
+
+
