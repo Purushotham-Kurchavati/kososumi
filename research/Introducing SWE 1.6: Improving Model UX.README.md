@@ -49,3 +49,7 @@ We also were able to significantly reduce occurrences of the model relying on th
 SWE 1.6 is available for everyone today in Windsurf, and will be free for the next 3 months. We have partnered with Fireworks to offer the free version at 200 tok/s. We have also partnered with Cerebras to offer a faster version of the model for our paying users at 950 tok/s, delivering the same intelligence with unmatched speed and cost.
 
 🎥 [Watch Demo Video](https://cdn.sanity.io/files/2mc9cv2v/production/72fb62844c57bab9d3144a336b0383e95a5d1963.mp4)
+
+# **Try SWE-1.6**
+
+SWE 1.6 is available for everyone today in Windsurf, and will be free for the next 3 months. We have partnered with Fireworks to offer the free version at 200 tok/s. We have also partnered with Cerebras to offer a faster version of the model for our paying users at 950 tok/s, delivering the same intelligence with unmatched speed and cost.
