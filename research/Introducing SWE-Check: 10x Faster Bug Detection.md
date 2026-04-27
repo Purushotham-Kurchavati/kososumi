@@ -10,3 +10,11 @@ We've partnered with Applied Compute to put this to the test by collaborating to
 
 While SWE-check is behind the frontier on out-of-distribution evals in terms of pure capability, its order of magnitude-faster wall-clock runtime and cheaper inference cost enable an instant and free bug detection experience not possible with frontier models. We will continue to improve this model and expect that additional work on the data generation pipeline will allow us to reduce the gap to frontier performance on out of distribution evals as well. A preview of SWE-check is available in Windsurf Next today and will be released in mainstream Windsurf soon.
 
+Here's how we did it:
+
+integrating natively with the production environment during RL
+using a new technique we term reward linearization to translate our desired global metric to a sample-level reward
+introducing multiple phases of post-training to build a model that is both capable and aligned with product usage patterns
+
+# **The SWE-check Agent and its requirements**
+The SWE-check agent analyzes the current diff and flags any bugs likely introduced by the change.
