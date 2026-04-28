@@ -22,3 +22,8 @@ The SWE-check agent analyzes the current diff and flags any bugs likely introduc
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/08e561ca0272842411fd07c1cda6a2c2d4567186-2000x949.png" width="900"/>
 </p>
+
+
+
+# **The SWE-check Agent and its requirements**
+The SWE-check agent analyzes the current diff and flags any bugs likely introduced by the change.
