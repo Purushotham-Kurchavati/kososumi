@@ -29,3 +29,11 @@ A new config flag silently switches output values from timestamps to normalized 
 This is not a typical code analysis task; unlike normal coding agents that operate in a chat interface, the SWE-check agent produces a structured output with bug descriptions and bug-fixes that render nicely in Windsurf.
 
 Here is an example of a ground truth bug from our training dataset, to provide a sense of the kinds of tasks the model is trained on:
+
+# **Repository:** block/goose
+
+# **Commit:** cd0b7d69
+
+# **PR(s) fixing bugs that trace back to this commit:** #5066
+
+# **Bug 1: Concurrency & Threading - High severity (2 changes)**
