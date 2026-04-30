@@ -24,3 +24,8 @@ The SWE-check agent analyzes the current diff and flags any bugs likely introduc
 </p>
 
 A new config flag silently switches output values from timestamps to normalized fractions. Each changed file is internally consistent, but spotting the issue requires tracing the data contract across three files to see where assumptions diverge.
+
+
+This is not a typical code analysis task; unlike normal coding agents that operate in a chat interface, the SWE-check agent produces a structured output with bug descriptions and bug-fixes that render nicely in Windsurf.
+
+Here is an example of a ground truth bug from our training dataset, to provide a sense of the kinds of tasks the model is trained on:
