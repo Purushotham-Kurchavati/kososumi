@@ -30,10 +30,10 @@ This is not a typical code analysis task; unlike normal coding agents that opera
 
 Here is an example of a ground truth bug from our training dataset, to provide a sense of the kinds of tasks the model is trained on:
 
-# **Repository:** block/goose
+**Repository:** block/goose
 
-# **Commit:** cd0b7d69
+**Commit:** cd0b7d69
 
-# **PR(s) fixing bugs that trace back to this commit:** #5066
+**PR(s) fixing bugs that trace back to this commit:** #5066
 
-# **Bug 1: Concurrency & Threading - High severity (2 changes)**
+**Bug 1: Concurrency & Threading - High severity (2 changes)**
