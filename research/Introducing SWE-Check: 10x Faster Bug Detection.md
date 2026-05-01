@@ -37,3 +37,12 @@ Here is an example of a ground truth bug from our training dataset, to provide a
 **PR(s) fixing bugs that trace back to this commit:** #5066
 
 **Bug 1: Concurrency & Threading - High severity (2 changes)**
+
+
+**Description:** The code iterated over the keys view returned by self.extensions.lock().await.keys() while holding the extensions mutex guard across the iteration. The loop body then awaited a call to read_resource_from_extension, which itself may attempt to lock the same self.extensions mutex. Holding a mutex guard across an await that leads to re-lock attempts causes a deadlock, since the original guard is not released before the re-lock is requested. This manifested as the extension manager hanging when trying to read resources from extensions.
+
+
+**Fix:** Before iterating and awaiting into extension-specific logic, the code now collects the extension names into an owned Vec<String> by cloning the keys while holding the lock and then immediately releases the lock. The subsequent iteration runs over the collected names (no mutex held), and calls into read_resource_from_extension with a reference to each name. This prevents holding the extensions mutex across awaits and eliminates the reentrant lock attempt that caused the deadlock. A short explanatory comment was also added above the collection to document the reason.
+
+
+# **Ground truth bug-fix:**
