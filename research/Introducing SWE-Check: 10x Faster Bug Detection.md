@@ -46,3 +46,7 @@ Here is an example of a ground truth bug from our training dataset, to provide a
 
 
 # **Ground truth bug-fix:**
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/2c6167fbf02585e3fa5351172d35ea337a3087c8-1468x1160.png" width="800"/>
+</p>
