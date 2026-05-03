@@ -45,8 +45,15 @@ Here is an example of a ground truth bug from our training dataset, to provide a
 **Fix:** Before iterating and awaiting into extension-specific logic, the code now collects the extension names into an owned Vec<String> by cloning the keys while holding the lock and then immediately releases the lock. The subsequent iteration runs over the collected names (no mutex held), and calls into read_resource_from_extension with a reference to each name. This prevents holding the extensions mutex across awaits and eliminates the reentrant lock attempt that caused the deadlock. A short explanatory comment was also added above the collection to document the reason.
 
 
-# **Ground truth bug-fix:**
+**Ground truth bug-fix:**
 
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/2c6167fbf02585e3fa5351172d35ea337a3087c8-1468x1160.png" width="800"/>
 </p>
+
+During training, the model starts inside a sandbox with the repo checked out to the source commit, and then its job is to output bugs that it identifies with descriptions along with bug-fixes. These bugs are compared to the ground truth bugs for that source commit.
+
+The agent also needs to be near-real time and keep users in flow, avoiding at all costs what we call **The Semi-Async Valley of Death.** Fortunately, inference providers like Cerebras allow for thousands of tokens of dense intermediate thinking to happen before the final output in a matter of seconds.
+
+At the same time, the model needs to be extremely high-quality, reliably finding subtle bugs when they exist while also not annoying the user with silly non-bugs. Before deciding to proceed with RL training, we had our colleagues dogfood various off-the-shelf frontier models, both open-source and closed-source, in the SWE-check harness. They found that frontier models that met the quality bar were too slow and expensive for on-demand bug detection in the IDE. This motivated RL-training an open-source model to be extremely specialized – fast and capable – on this task.
+
