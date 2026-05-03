@@ -57,3 +57,14 @@ The agent also needs to be near-real time and keep users in flow, avoiding at al
 
 At the same time, the model needs to be extremely high-quality, reliably finding subtle bugs when they exist while also not annoying the user with silly non-bugs. Before deciding to proceed with RL training, we had our colleagues dogfood various off-the-shelf frontier models, both open-source and closed-source, in the SWE-check harness. They found that frontier models that met the quality bar were too slow and expensive for on-demand bug detection in the IDE. This motivated RL-training an open-source model to be extremely specialized – fast and capable – on this task.
 
+
+We ran two primary evals:
+
+
+in-distribution eval that was a random subset of the tasks generated in our data pipeline, held out from the other tasks making up the training distribution.
+
+out-of-distribution eval that was a collection of bugs collected internally at Cognition in the Cognition codebase and fully held-out during the training process.
+
+Here is how the final trained model performed compared to frontier closed- and open-source models:
+
+
