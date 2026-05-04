@@ -68,3 +68,17 @@ out-of-distribution eval that was a collection of bugs collected internally at C
 Here is how the final trained model performed compared to frontier closed- and open-source models:
 
 
+We ran two primary evals:
+
+
+in-distribution eval that was a random subset of the tasks generated in our data pipeline, held out from the other tasks making up the training distribution.
+
+out-of-distribution eval that was a collection of bugs collected internally at Cognition in the Cognition codebase and fully held-out during the training process.
+
+Here is how the final trained model performed compared to frontier closed- and open-source models:
+
+
+
+
+
+
