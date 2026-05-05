@@ -71,7 +71,11 @@ Here is how the final trained model performed compared to frontier closed- and o
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/5e3a03fd32868f762326accae47560ea31cee301-4812x1980.png" width="1000"/>
 </p>
 
+# **Training with production settings**
 
+A smaller, faster, and cheaper model trained to be a specialist can be brought to the frontier performance on its “spike” (i.e. its area of specialization). To deliver the best possible results on all three axes for our chosen spike, the SWE-check task, we therefore had to replicate the actual environment where our model would be served in production. This would ensure that any gains observed in training translate directly to an improved end-user experience in the Windsurf IDE.
+
+To that end, we replicated the toolset available in the Windsurf harness in the training sandbox. We also curated a dataset with diverse bug types over many programming languages, and we iterated on the dataset together to ensure that the distribution was representative of what was expected in production.
 
 
 
