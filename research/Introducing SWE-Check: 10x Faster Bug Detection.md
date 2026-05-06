@@ -84,3 +84,10 @@ Finally, and we think most importantly, we iteratively trained several models an
 For example, in one of the iterations, we received feedback that the model would constantly report bugs where if it simply looked up the definition of one of the variables in the code block, it would know the code block was correct. We realized the agent didn’t have access to turn-efficient tracing tools to help it look up definitions and find references, so we built and exposed these new tools in Windsurf as well as our training setup and then re-trained.
 
 The key takeaway from the specialization process is that feedback from production directly drives iterations on the training runs. Everything that goes into the model training run has its roots traced directly back to some aspect of the production environment or feedback from real users.
+
+# **How we designed the reward function**
+The reward used in post-training determines the model’s behaviors. Our technical report focuses on two key ideas:
+
+**Reward linearization** to provide a sample-level reward which serves as a proxy for hill-climbing the population level statistic. We take a global metric that is representative of user preferences, and convert it into a reward that can be assigned to each individual sample.
+
+**Two-phase post-training** to first maximize capability and then align the model to product usage patterns by reducing latency. We found that splitting post-training into these phases yielded a stronger model than simply training against one reward function that captures both capability and usage patterns.
