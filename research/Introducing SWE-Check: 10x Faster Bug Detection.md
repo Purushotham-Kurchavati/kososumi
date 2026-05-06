@@ -77,6 +77,10 @@ A smaller, faster, and cheaper model trained to be a specialist can be brought t
 
 To that end, we replicated the toolset available in the Windsurf harness in the training sandbox. We also curated a dataset with diverse bug types over many programming languages, and we iterated on the dataset together to ensure that the distribution was representative of what was expected in production.
 
+We also worked extensively on aligning the training reward with user behaviors during dogfooding trials of early versions of the SWE-check agent. For example, we looked at statistical data on how long it took for users to switch off of SWE-check after invoking it (more on this in the next section).
 
+Finally, and we think most importantly, we iteratively trained several models and built a tight feedback loop with dogfooding. Although we invested a lot of effort into training models against a reward function, ultimately human taste and how the agent feels to actually use while working is what matters most. People dogfooding the agent gave us extremely valuable feedback on every iteration.
 
+For example, in one of the iterations, we received feedback that the model would constantly report bugs where if it simply looked up the definition of one of the variables in the code block, it would know the code block was correct. We realized the agent didn’t have access to turn-efficient tracing tools to help it look up definitions and find references, so we built and exposed these new tools in Windsurf as well as our training setup and then re-trained.
 
+The key takeaway from the specialization process is that feedback from production directly drives iterations on the training runs. Everything that goes into the model training run has its roots traced directly back to some aspect of the production environment or feedback from real users.
