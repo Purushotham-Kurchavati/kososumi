@@ -93,11 +93,12 @@ The reward used in post-training determines the model’s behaviors. Our technic
 **Two-phase post-training** to first maximize capability and then align the model to product usage patterns by reducing latency. We found that splitting post-training into these phases yielded a stronger model than simply training against one reward function that captures both capability and usage patterns.
 
 
+# **Reward linearization**
 
-# **How we designed the reward function**
-The reward used in post-training determines the model’s behaviors. Our technical report focuses on two key ideas:
+We begin by formalizing the training setup. Each rollout τ has its own set of ground truth bugs (possibly 0). We score a set of predicted bugs as follows:
 
-**Reward linearization** to provide a sample-level reward which serves as a proxy for hill-climbing the population level statistic. We take a global metric that is representative of user preferences, and convert it into a reward that can be assigned to each individual sample.
-
-**Two-phase post-training** to first maximize capability and then align the model to product usage patterns by reducing latency. We found that splitting post-training into these phases yielded a stronger model than simply training against one reward function that captures both capability and usage patterns.
-
+We first check if the bugs are scoped correctly with a simple LLM-judge pass — if any bug in the list is actually a conglomerate of two different issues, we set the score to 0.
+We then check if each of the predicted bugs in the list matches one of the ground truth bugs.
+The results of these checks allows us to compute a sample-level precision and recall, which we define as **P(τ) and R(τ).** These should always be numbers between 0 and 1. We handle edge cases as follows:
+if there are no predicted bugs and no ground truth bugs, we set the precision and recall to 1
+otherwise, if exactly one of the predicted bugs and ground truth bugs lists is empty, then we set the precision and recall to 0
