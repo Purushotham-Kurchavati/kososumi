@@ -102,3 +102,12 @@ We then check if each of the predicted bugs in the list matches one of the groun
 The results of these checks allows us to compute a sample-level precision and recall, which we define as **P(τ) and R(τ).** These should always be numbers between 0 and 1. We handle edge cases as follows:
 if there are no predicted bugs and no ground truth bugs, we set the precision and recall to 1
 otherwise, if exactly one of the predicted bugs and ground truth bugs lists is empty, then we set the precision and recall to 0
+
+How do we aggregate these scores over many samples? There are two reasonable ways to go about this:
+
+We could aggregate a global total count of true positives (TP), false positives (FP), and false negatives (FN) to compute a global precision and recall, then combine them into an f_β score.
+We could average P(τ) and R(τ) over the samples to get an average precision and an average recall, then combine them into an f_β score.
+Since we would not want to bias the model to be disproportionately good at examples where there are a lot of ground truth bugs (at the expense of poor performance on examples where there are few / no ground truth bugs), we opt for the second choice.
+
+🚨 Choice of β: Early iterations of the model used β=1 and produced many false positives, flagging many benign diffs as bugs during dogfooding. To mitigate this, we decided to switch to β=0.5, emphasizing precision.
+We define R_pop = E_τ[R(τ)] and P_pop = E_τ[P(τ)]. We ultimately want the model to increase the metric
