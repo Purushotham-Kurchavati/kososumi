@@ -111,3 +111,7 @@ Since we would not want to bias the model to be disproportionately good at examp
 
 🚨 Choice of β: Early iterations of the model used β=1 and produced many false positives, flagging many benign diffs as bugs during dogfooding. To mitigate this, we decided to switch to β=0.5, emphasizing precision.
 We define R_pop = E_τ[R(τ)] and P_pop = E_τ[P(τ)]. We ultimately want the model to increase the metric
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/007bb0f1ed8599348d26a420c996405fdb6135e5-2540x361.png" width="950"/>
+</p>
