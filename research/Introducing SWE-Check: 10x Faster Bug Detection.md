@@ -121,3 +121,7 @@ Given this global metric, what should our sample level reward then be? A key obs
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/84c2c7020bfb7173620c6d499c1a1e03f18e5017-2540x348.png" width="950"/>
 </p>
+
+because averaging **f_β(τ)** does not yield **f_β.** This motivates our idea of reward linearization, where we compute a first order approximation of **f_β** in terms of **P_pop** and **R_pop,** so that the averaging actually does work out!
+
+Since we have a good sense of the initial values of **P_pop, R_pop** (call these initial values **P_pop,init and R_pop,init),** and the initial distribution of **TP/FP/FN** rates, then we can approximate the **f_β** value with a suitable first order linear approximation in **P_pop and R_pop:**
