@@ -117,3 +117,7 @@ We define R_pop = E_τ[R(τ)] and P_pop = E_τ[P(τ)]. We ultimately want the mo
 </p>
 
 Given this global metric, what should our sample level reward then be? A key observation is that we cannot directly use
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/84c2c7020bfb7173620c6d499c1a1e03f18e5017-2540x348.png" width="950"/>
+</p>
