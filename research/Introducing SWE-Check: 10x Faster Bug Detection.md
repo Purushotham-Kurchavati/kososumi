@@ -133,3 +133,7 @@ Since we have a good sense of the initial values of **P_pop, R_pop** (call these
 🚨 It is important that the first order approximation is done with awareness of the initial values of the TP/FP/FN rates. In our runs, the changes in TP/FP/FN rates did not change the resulting slopes drastically over the course of the run so we used a fixed linearization; our method could be generalized by recalibrating the first order approximation during training if some of the initial values deviate too much.
 
 Then a valid sample-level reward function (since it averages to the desired f_β approximation above) would be
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/c281a39b5d626879fd8d72ee37d95637488f09ed-2545x458.png" width="950"/>
+</p>
