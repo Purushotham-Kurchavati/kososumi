@@ -141,3 +141,6 @@ Then a valid sample-level reward function (since it averages to the desired f_β
 
 In fact, we can translate/scale the reward function, so we can force **y=1** and remove all the constant terms. In our case we ended up using the sample level reward reward**(τ) = ½·P(τ) + R(τ).** A model that receives the reward reward**(τ)** for each sample will end up climbing the global **f_β** metric, as desired!
 
+
+In fact, we can translate/scale the reward function, so we can force **y=1** and remove all the constant terms. In our case we ended up using the sample level reward reward**(τ) = ½·P(τ) + R(τ).** A model that receives the reward reward**(τ)** for each sample will end up climbing the global **f_β** metric, as desired!
+
