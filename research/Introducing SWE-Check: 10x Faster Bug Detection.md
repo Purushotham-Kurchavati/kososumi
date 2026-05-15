@@ -150,3 +150,7 @@ Our goal was to train a model with frontier performance that had a much better l
 
 Capability maximization: The reward function is the base reward function which we computed in the reward linearization section. By climbing this reward, the model focuses purely on maximizing bug detection skill and is not penalized for incremental latency. Capability maximization was the bulk of the overall training process.
 Product alignment: The reward function is the base reward function plus an additional “latency penalty”. To compute the latency penalty, we first estimated the latency of the rollout using the number of completion tokens and tool-calling turns. Then, we observed the statistical distribution for how long it takes users to switch off of SWE-check after invoking it using dogfooding data from an early internal version of the SWE-check agent.
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/3adc18390ddd36c39e83adca8694dd4efd150bb0-1600x1200.png?w=1600&fit=max" width="850"/>
+</p>
