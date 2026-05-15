@@ -144,3 +144,9 @@ In fact, we can translate/scale the reward function, so we can force **y=1** and
 
 In fact, we can translate/scale the reward function, so we can force **y=1** and remove all the constant terms. In our case we ended up using the sample level reward reward**(τ) = ½·P(τ) + R(τ).** A model that receives the reward reward**(τ)** for each sample will end up climbing the global **f_β** metric, as desired!
 
+# **Two-phase post-training**
+
+Our goal was to train a model with frontier performance that had a much better latency profile. We found that the most effective training approach split the process into two distinct phases. The two phases differ only in the reward function, with the rest of the training setup remaining exactly the same.
+
+Capability maximization: The reward function is the base reward function which we computed in the reward linearization section. By climbing this reward, the model focuses purely on maximizing bug detection skill and is not penalized for incremental latency. Capability maximization was the bulk of the overall training process.
+Product alignment: The reward function is the base reward function plus an additional “latency penalty”. To compute the latency penalty, we first estimated the latency of the rollout using the number of completion tokens and tool-calling turns. Then, we observed the statistical distribution for how long it takes users to switch off of SWE-check after invoking it using dogfooding data from an early internal version of the SWE-check agent.
