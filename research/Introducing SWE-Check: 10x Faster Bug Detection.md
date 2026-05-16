@@ -154,3 +154,7 @@ Product alignment: The reward function is the base reward function plus an addit
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/3adc18390ddd36c39e83adca8694dd4efd150bb0-1600x1200.png?w=1600&fit=max" width="850"/>
 </p>
+
+This distribution was effectively a proxy for how much time we had to keep users in-flow. We then computed the CDF of this distribution and used it to define a penalty that scales with estimated latency. The CDF at a given time tells us what fraction of users would have already moved on by then.
+
+We normalized the penalty so that it starts at 0 for instant responses and is 1 at the tail, then linearly interpolated between bucket midpoints.
