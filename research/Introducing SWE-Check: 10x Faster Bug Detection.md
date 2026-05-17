@@ -166,3 +166,7 @@ We normalized the penalty so that it starts at 0 for instant responses and is 1 
 The product alignment reward pushed the model to shed redundant tokens and improve parallel tool-calling, while not sacrificing performance for latency beyond what was necessary for user experience. Product alignment was a much shorter phase than capability maximization in terms of training compute.
 
 This two-phase approach outperformed the alternative of training with a single combined reward function from the start. When capability and product constraints were optimized simultaneously, the model tended to converge on local optima: for instance, learning to be extremely fast but producing shallow analysis that satisfied the latency target but missed real bugs. Separating the phases allowed the model to first develop genuine understanding of the task, then learn to compress that understanding efficiently.
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/9e9762e0cf5f05a3e0f7365aed9bf65d519b0634-1600x1151.png?w=1600&fit=max" width="850"/>
+</p>
