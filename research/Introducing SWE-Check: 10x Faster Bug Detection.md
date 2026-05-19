@@ -177,3 +177,13 @@ Additionally, in the second phase of post-training we observed:
 Initially, the model had minimal performance degradation while the latency penalty was reduced;
 Then, the model’s performance began more noticeably declining as the latency penalty continued to decrease.
 The second phase therefore is a tunable knob which we can use to choose exactly the performance-latency profile that fits our use case best. In our case, we selected the point on this Pareto frontier based on product usage patterns, as discussed earlier.
+
+
+
+
+Additionally, in the second phase of post-training we observed:
+
+Initially, the model had minimal performance degradation while the latency penalty was reduced;
+Then, the model’s performance began more noticeably declining as the latency penalty continued to decrease.
+The second phase therefore is a tunable knob which we can use to choose exactly the performance-latency profile that fits our use case best. In our case, we selected the point on this Pareto frontier based on product usage patterns, as discussed earlier.
+
