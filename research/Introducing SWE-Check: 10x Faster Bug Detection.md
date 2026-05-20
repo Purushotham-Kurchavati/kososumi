@@ -179,11 +179,13 @@ Then, the model’s performance began more noticeably declining as the latency p
 The second phase therefore is a tunable knob which we can use to choose exactly the performance-latency profile that fits our use case best. In our case, we selected the point on this Pareto frontier based on product usage patterns, as discussed earlier.
 
 
+# **Conclusion**
 
+To recap, model specialization is a powerful tool to approach frontier performance with a better latency, cost, and user experience profile that is deeply aligned with the product feature.
 
-Additionally, in the second phase of post-training we observed:
+Integrating natively with the harness ensured our training gains would reflect in production. Frequent dogfooding trials allowed us to quickly translate user feedback into changes in the training recipe. Using reward linearization allowed us to effectively boil a production performance metric down to the sample level for training. Splitting post-training into multiple phases empowered us to balance two different goals – capability in the core task and product latency requirements – in our model training.
 
-Initially, the model had minimal performance degradation while the latency penalty was reduced;
-Then, the model’s performance began more noticeably declining as the latency penalty continued to decrease.
-The second phase therefore is a tunable knob which we can use to choose exactly the performance-latency profile that fits our use case best. In our case, we selected the point on this Pareto frontier based on product usage patterns, as discussed earlier.
+There is still meaningful room for improvement in the final model – although it is on the Pareto frontier, it is not categorically the most capable model on this task. The training recipe discussed has proven to hill-climb well on both in-distribution and out-of-distribution evals, and with a broader data mix and improved base models, we expect continued performance gains over time.
+
+You can try a preview of SWE-check today in Windsurf Next using the cmd+U shortcut. It will be available in Windsurf soon.
 
