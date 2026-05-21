@@ -187,5 +187,5 @@ Integrating natively with the harness ensured our training gains would reflect i
 
 There is still meaningful room for improvement in the final model – although it is on the Pareto frontier, it is not categorically the most capable model on this task. The training recipe discussed has proven to hill-climb well on both in-distribution and out-of-distribution evals, and with a broader data mix and improved base models, we expect continued performance gains over time.
 
-You can try a preview of SWE-check today in Windsurf Next using the cmd+U shortcut. It will be available in Windsurf soon.
+You can try a preview of SWE-check today in **Windsurf Next** using the cmd+U shortcut. It will be available in Windsurf soon.
 
