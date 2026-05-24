@@ -27,3 +27,5 @@ In SWE-bench, LLMs are either given the set of correct files to edit (“assiste
 
 Properly solving SWE-bench examples is challenging. The harder PRs require changing tens of files, maintaining backwards compatibility, and/or doing a lot of complex reasoning. Even when assisted, the best LLMs only achieve a 4.80% success rate.
 
+# **Methodology**
+We adapt SWE-bench to evaluate agents, a more general setting than the original eval for LLMs.
