@@ -29,3 +29,18 @@ Properly solving SWE-bench examples is challenging. The harder PRs require chang
 
 # **Methodology**
 We adapt SWE-bench to evaluate agents, a more general setting than the original eval for LLMs.
+
+Setup
+
+We run the agent end to end using a standardized prompt that asks it to edit code given only the GitHub issue description. We do not give the agent any other user input during the run.
+The repo is cloned in the agent's environment. We only keep the base commit and its ancestors in the git history to prevent information leakage to the agent. Notably, we remove the git remote so that git pull does not work.
+We set up the Python conda environment before the test starts.
+We limit Devin to 45 minutes of runtime, as unlike most agents, it has the capability to run indefinitely. It can choose to terminate earlier if it wants.
+
+Eval
+
+Once the agent’s run exits, we reset all of the test files to the original state, in case the agent modified the tests. We take all other diffs in the file system and extract them as a patch.To determine which files are test files, we take the set of all files that were modified in the test patch.
+We apply the agent’s patch to the repo, followed by the test patch.
+We run the eval command provided by SWE-bench and check whether all the tests pass.
+You can find code for our adapted eval harness at https://github.com/CognitionAI/devin-swebench-results.
+
