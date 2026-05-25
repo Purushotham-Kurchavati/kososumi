@@ -44,3 +44,7 @@ We apply the agent’s patch to the repo, followed by the test patch.
 We run the eval command provided by SWE-bench and check whether all the tests pass.
 You can find code for our adapted eval harness at https://github.com/CognitionAI/devin-swebench-results.
 
+Results
+
+We evaluated Devin on a randomly chosen 25% of the SWE-benchmark test set (570 out of the 2,294). This was done to reduce the time it takes for the benchmark to finish, the same strategy the authors used in the original paper.
+Devin successfully resolved 79 of the 570 issues, giving a 13.86% success rate. This is significantly higher than even the previous best assisted system (Claude 2) of 4.80%.
