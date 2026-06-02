@@ -70,3 +70,10 @@ Devin can execute multi-step plans to receive feedback from the environment. 72%
 
 Devin can execute multi-step plans to receive feedback from the environment. 72% of passing tests take over 10 minutes to complete, suggesting that the ability to iterate helps Devin succeed.
 
+
+
+# **Analysis**
+
+**Multi-step planning**
+
+Devin can execute multi-step plans to receive feedback from the environment. 72% of passing tests take over 10 minutes to complete, suggesting that the ability to iterate helps Devin succeed.
