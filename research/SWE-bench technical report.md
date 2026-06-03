@@ -63,17 +63,6 @@ Because neither unassisted nor assisted is strictly comparable to the agent sett
 
 Devin can execute multi-step plans to receive feedback from the environment. 72% of passing tests take over 10 minutes to complete, suggesting that the ability to iterate helps Devin succeed.
 
-
-# **Analysis**
-
-**Multi-step planning**
-
-Devin can execute multi-step plans to receive feedback from the environment. 72% of passing tests take over 10 minutes to complete, suggesting that the ability to iterate helps Devin succeed.
-
-
-
-# **Analysis**
-
-**Multi-step planning**
-
-Devin can execute multi-step plans to receive feedback from the environment. 72% of passing tests take over 10 minutes to complete, suggesting that the ability to iterate helps Devin succeed.
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/db0e6e76b039ed477533effc754bb8ea12a85808-800x600.png?w=1600&fit=max" width="700"/>
+</p>
