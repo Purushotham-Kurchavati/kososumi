@@ -66,3 +66,7 @@ Devin can execute multi-step plans to receive feedback from the environment. 72%
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/db0e6e76b039ed477533effc754bb8ea12a85808-800x600.png?w=1600&fit=max" width="700"/>
 </p>
+
+# **Qualitative examples**
+
+We provide some qualitative analysis of Devin’s results. Recall that Devin is given just the issue description and the cloned repository as input.
