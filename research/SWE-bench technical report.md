@@ -70,3 +70,5 @@ Devin can execute multi-step plans to receive feedback from the environment. 72%
 # **Qualitative examples**
 
 We provide some qualitative analysis of Devin’s results. Recall that Devin is given just the issue description and the cloned repository as input.
+
+Example 1: ✅ scikit-learn__scikit-learn-10870
