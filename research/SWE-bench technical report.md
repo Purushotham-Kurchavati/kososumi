@@ -76,3 +76,5 @@ Example 1: ✅ scikit-learn__scikit-learn-10870
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/ac0d59216d45f5efb79f63deeea717b5191dc62e-1600x1343.png?w=1600&fit=max" width="800"/>
 </p>
+
+Devin is initially thrown off by the description, and adds self.lower_bound_ = max_lower_bound before return self literally as described. This is actually incorrect, as the variable isn't defined yet.
