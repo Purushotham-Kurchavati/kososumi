@@ -91,3 +91,6 @@ As test code provided in the issue description, Devin then updates the test file
 
 But upon running the tests and receiving errors, Devin corrects the file:
 
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/cbe9dcd92c9ac9b5bbacde2269de0c61459da762-1600x148.png?w=1600&fit=max" width="900"/>
+</p>
