@@ -98,3 +98,10 @@ But upon running the tests and receiving errors, Devin corrects the file:
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/c084bcb71355d9f286327dcfcc8960e55a2f611a-1600x1098.png?w=1600&fit=max" width="850"/>
 </p>
+
+Upon this fix, Devin reruns the test to make it pass and successfully exits.
+
+This example is interesting for a few reasons:
+
+Devin follows instructions from the original issue extremely closely, despite the inaccuracy. This indicates overalignment with the user’s preferences.
+Given the ability to run tests in its environment, Devin is able to correct its mistakes. It’s crucial for software developers to be able to iterate, and agents should be able to do the same.
