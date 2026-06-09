@@ -94,3 +94,7 @@ But upon running the tests and receiving errors, Devin corrects the file:
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/cbe9dcd92c9ac9b5bbacde2269de0c61459da762-1600x148.png?w=1600&fit=max" width="900"/>
 </p>
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/c084bcb71355d9f286327dcfcc8960e55a2f611a-1600x1098.png?w=1600&fit=max" width="850"/>
+</p>
