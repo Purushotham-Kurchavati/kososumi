@@ -107,3 +107,7 @@ Devin follows instructions from the original issue extremely closely, despite th
 Given the ability to run tests in its environment, Devin is able to correct its mistakes. It’s crucial for software developers to be able to iterate, and agents should be able to do the same.
 
 Example 2: ✅ django__django-10973
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/6ab26ddf8b9fca90d9377ddb07cbfa95f1c86840-1600x1075.png?w=1600&fit=max" width="850"/>
+</p>
