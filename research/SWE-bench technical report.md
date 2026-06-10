@@ -105,3 +105,5 @@ This example is interesting for a few reasons:
 
 Devin follows instructions from the original issue extremely closely, despite the inaccuracy. This indicates overalignment with the user’s preferences.
 Given the ability to run tests in its environment, Devin is able to correct its mistakes. It’s crucial for software developers to be able to iterate, and agents should be able to do the same.
+
+Example 2: ✅ django__django-10973
