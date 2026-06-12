@@ -117,3 +117,5 @@ Devin identifies the correct file django/db/backends/postgresql/client.py, and m
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/f499353dd139557c562f399654a4c0356b5aff0e-1600x1106.png?w=1600&fit=max" width="850"/>
 </p>
+
+Here, Devin is able to modify a large chunk of code successfully. Many of the successful edits in SWE-bench consist of single line diffs, but Devin is able to handle several lines at once.
