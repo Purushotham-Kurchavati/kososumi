@@ -119,3 +119,9 @@ Devin identifies the correct file django/db/backends/postgresql/client.py, and m
 </p>
 
 Here, Devin is able to modify a large chunk of code successfully. Many of the successful edits in SWE-bench consist of single line diffs, but Devin is able to handle several lines at once.
+
+# **Example 3: ❌ sympy__sympy-17313**
+
+This is a difficult task involving modifying a computer algebra system to correctly handle comparison operators on floor and ceiling objects in relation to values that can be specified to be positive or negative. It requires complex logical reasoning and multiple deduction steps.
+
+
