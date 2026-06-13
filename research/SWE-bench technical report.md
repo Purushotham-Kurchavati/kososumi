@@ -124,4 +124,7 @@ Here, Devin is able to modify a large chunk of code successfully. Many of the su
 
 This is a difficult task involving modifying a computer algebra system to correctly handle comparison operators on floor and ceiling objects in relation to values that can be specified to be positive or negative. It requires complex logical reasoning and multiple deduction steps.
 
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/e735fc060bd0fd1ebb72d12d5496b1a04a304f58-1600x520.png?w=1600&fit=max" width="900"/>
+</p>
 
