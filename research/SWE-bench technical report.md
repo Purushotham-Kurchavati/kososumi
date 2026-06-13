@@ -128,3 +128,5 @@ This is a difficult task involving modifying a computer algebra system to correc
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/e735fc060bd0fd1ebb72d12d5496b1a04a304f58-1600x520.png?w=1600&fit=max" width="900"/>
 </p>
 
+Devin misses the correct class to edit, editing the frac class rather than the floor class and ceiling class. On top of that Devin only edits one of the comparison operators, __gt__, when __lt__, __le__, and __ge__ need to be modified as well. This edit is quite far from being correct.
+
