@@ -130,3 +130,6 @@ This is a difficult task involving modifying a computer algebra system to correc
 
 Devin misses the correct class to edit, editing the frac class rather than the floor class and ceiling class. On top of that Devin only edits one of the comparison operators, __gt__, when __lt__, __le__, and __ge__ need to be modified as well. This edit is quite far from being correct.
 
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/cf74e3e39e80119a8db6aede8578702da97ba021-1600x794.png?w=1600&fit=max" width="850"/>
+</p>
