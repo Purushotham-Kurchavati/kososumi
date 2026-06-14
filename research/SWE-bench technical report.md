@@ -133,3 +133,6 @@ Devin misses the correct class to edit, editing the frac class rather than the f
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/cf74e3e39e80119a8db6aede8578702da97ba021-1600x794.png?w=1600&fit=max" width="850"/>
 </p>
+
+The correct diff can be found here:
+https://github.com/sympy/sympy/pull/17313/files. The diff is quite complex with a lot of edge case handling and a large number of unit tests, and requires a deep understanding of the sympy codebase. (Note that every single test must pass in order to pass the SWE-bench instance.)
