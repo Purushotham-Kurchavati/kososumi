@@ -136,3 +136,6 @@ Devin misses the correct class to edit, editing the frac class rather than the f
 
 The correct diff can be found here:
 https://github.com/sympy/sympy/pull/17313/files. The diff is quite complex with a lot of edge case handling and a large number of unit tests, and requires a deep understanding of the sympy codebase. (Note that every single test must pass in order to pass the SWE-bench instance.)
+
+Example 4: ❌ scikit-learn__scikit-learn-10774
+This task involves adding additional return option functionality to all of the datasets in the repo. Devin is able to successfully make this edit for several of the datasets; an example is shown below.
