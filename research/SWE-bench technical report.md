@@ -139,3 +139,7 @@ https://github.com/sympy/sympy/pull/17313/files. The diff is quite complex with 
 
 Example 4: ❌ scikit-learn__scikit-learn-10774
 This task involves adding additional return option functionality to all of the datasets in the repo. Devin is able to successfully make this edit for several of the datasets; an example is shown below.
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/bd73215d40a7bcd7807527f6f96804e935c52a7d-1600x753.png?w=1600&fit=max" width="850"/>
+</p>
