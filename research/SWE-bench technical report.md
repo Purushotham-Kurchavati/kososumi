@@ -148,3 +148,5 @@ This task involves adding additional return option functionality to all of the d
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/f264f7afcdd440d5d960c27928daad1721c8aaef-1600x213.png?w=1600&fit=max" width="1000"/>
 </p>
 
+Devin manages to make a similar edit for the datasets california_housing.py, covtype.py, kddcup99.py, and mldata.py (which the original PR actually excluded). Unfortunately Devin misses two of the datasets, lfw.py and rcv1.py, so the tests ultimately fail. We intend to improve Devin’s capabilities for editing multiple files.
+
