@@ -143,3 +143,8 @@ This task involves adding additional return option functionality to all of the d
 <p align="center">
   <img src="https://cdn.sanity.io/images/2mc9cv2v/production/bd73215d40a7bcd7807527f6f96804e935c52a7d-1600x753.png?w=1600&fit=max" width="850"/>
 </p>
+
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/f264f7afcdd440d5d960c27928daad1721c8aaef-1600x213.png?w=1600&fit=max" width="1000"/>
+</p>
+
