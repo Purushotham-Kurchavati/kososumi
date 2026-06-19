@@ -160,4 +160,8 @@ Example of issues which Devin newly solved with the test
 ✅ django__django-13321:
 Devin solved this issue by adding a print statement right before the function, then running the unit test, and then editing the file based on the print statement. The presence of the test case made it easy for Devin to debug.
 
+<p align="center">
+  <img src="https://cdn.sanity.io/images/2mc9cv2v/production/31ade22b6357758be3643a803e50abe551bed3a9-1600x346.png?w=1600&fit=max" width="1000"/>
+</p>
+
 
