@@ -170,6 +170,6 @@ Devin solved this issue by adding a print statement right before the function, t
 
 ✅ django__django-16983: The new unit test asserts that an exact error message is emitted: “The value of 'filter_horizontal[0]' cannot include […]”. It’s not possible to pass the test without already knowing the precise wording of the error. This highlights an issue with the benchmark and shows that it’s not possible to get a perfect score without the test patches.
 
+# **Caveats**
 
-✅ django__django-16983: The new unit test asserts that an exact error message is emitted: “The value of 'filter_horizontal[0]' cannot include […]”. It’s not possible to pass the test without already knowing the precise wording of the error. This highlights an issue with the benchmark and shows that it’s not possible to get a perfect score without the test patches.
-
+Given the popularity of the open-source repos in the benchmark, Devin’s underlying models will contain data from these repositories. However, the baselines we are comparing to (Claude, GPT, Llama, etc.) face similar data contamination issues.
