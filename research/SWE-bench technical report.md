@@ -180,4 +180,4 @@ In addition, effort needs to be put in to prevent agents from finding external i
 
 Agents are still in their infancy, and there’s a lot of room for improvement. At Cognition, we believe that agents will dramatically improve in the near future. We’re excited to see progress on SWE-bench and new benchmarks for tasks such as data analysis, browsing for information, and more.
 
-Help us push the frontier of reasoning and planning. We’re hiring!
+
