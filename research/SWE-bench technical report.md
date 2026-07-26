@@ -192,15 +192,3 @@ In addition, effort needs to be put in to prevent agents from finding external i
 # **Going forward**
 
 Agents are still in their infancy, and there’s a lot of room for improvement. At Cognition, we believe that agents will dramatically improve in the near future. We’re excited to see progress on SWE-bench and new benchmarks for tasks such as data analysis, browsing for information, and more.
-
-
-# **Caveats**
-
-Given the popularity of the open-source repos in the benchmark, Devin’s underlying models will contain data from these repositories. However, the baselines we are comparing to (Claude, GPT, Llama, etc.) face similar data contamination issues.
-
-In addition, effort needs to be put in to prevent agents from finding external information about these PRs and potentially copying the diff. During test setup, we remove the Github remote and all future commits from the repository so agents can’t access those directly. Agents with internet access could potentially find external information through other methods; we’ve manually inspected Devin’s successful runs to ensure this hasn’t happened.
-
-# **Going forward**
-
-Agents are still in their infancy, and there’s a lot of room for improvement. At Cognition, we believe that agents will dramatically improve in the near future. We’re excited to see progress on SWE-bench and new benchmarks for tasks such as data analysis, browsing for information, and more.
-
