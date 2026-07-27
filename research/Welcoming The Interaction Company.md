@@ -10,3 +10,5 @@ By Scott Wu
   <br>
   <strong>🎥 Click to Watch the Demo Video</strong>
 </p>
+
+Today, we’re welcoming The Interaction Company of California, the makers of Poke, to Cognition.
